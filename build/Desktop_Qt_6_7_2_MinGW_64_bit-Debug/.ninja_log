@@ -1,0 +1,18 @@
+# ninja log v6
+614	1985	7453777678478513	CMakeFiles/nitrous.dir/main.cpp.obj	1f26aef05c982d3a
+610	1956	7453777678441058	CMakeFiles/nitrous.dir/nitrous_autogen/mocs_compilation.cpp.obj	ef506a7eb90b5818
+15	107	7453778255788591	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	31905f4e83025b2a
+97	606	7453777677778455	nitrous_autogen/timestamp	836bb6ddabfb36df
+97	606	7453777677778455	nitrous_autogen/mocs_compilation.cpp	836bb6ddabfb36df
+97	606	7453777677778455	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/timestamp	836bb6ddabfb36df
+97	606	7453777677778455	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/mocs_compilation.cpp	836bb6ddabfb36df
+619	1988	7453777678525700	CMakeFiles/nitrous.dir/mainwindow.cpp.obj	472ded008f76417b
+1988	2152	7453777692217995	nitrous.exe	f7772680ea1e2874
+108	752	7453778262027051	build.ninja	4cb7d0d349daeacf
+17	111	7453778262863778	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	31905f4e83025b2a
+119	283	7453778263877920	nitrous_autogen/timestamp	836bb6ddabfb36df
+119	283	7453778263877920	nitrous_autogen/mocs_compilation.cpp	836bb6ddabfb36df
+119	283	7453778263877920	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/timestamp	836bb6ddabfb36df
+119	283	7453778263877920	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/mocs_compilation.cpp	836bb6ddabfb36df
+283	1661	7453778265521965	CMakeFiles/nitrous.dir/mainwindow.cpp.obj	472ded008f76417b
+1661	1825	7453778279301780	nitrous.exe	f7772680ea1e2874
