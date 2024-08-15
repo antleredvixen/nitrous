@@ -355,6 +355,12 @@ Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.7.2/mingw_64/bin/windeployqt.exe
 
+//The directory containing a CMake configuration file for libusb-1.0.27.
+libusb-1.0.27_DIR:PATH=libusb-1.0.27_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for libusb-1.0.
+libusb-1.0_DIR:PATH=libusb-1.0_DIR-NOTFOUND
+
 //Value Computed by CMake
 nitrous_BINARY_DIR:STATIC=C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug
 

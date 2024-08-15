@@ -12,6 +12,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
+set(LIBUSB_INCLUDE_DIR "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include")
+set(LIBUSB_LIBRARY "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/MinGW64/static/libusb-1.0.a")
+
 set(TS_FILES nitrous_en_US.ts)
 
 set(PROJECT_SOURCES
@@ -51,7 +54,8 @@ else()
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-target_link_libraries(nitrous PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_include_directories(nitrous PRIVATE ${LIBUSB_INCLUDE_DIR})
+target_link_libraries(nitrous PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${LIBUSB_LIBRARY})
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -69,7 +73,7 @@ set_target_properties(nitrous PROPERTIES
 
 include(GNUInstallDirs)
 install(TARGETS nitrous
-    BUNDLE DESTINATION .
+    BUNDLE DESTINATION ${CMAKE_INSTALL_PREFIX}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )

@@ -6,7 +6,7 @@
 StatusWidget::StatusWidget(QWidget *parent) : QWidget(parent)
 {
     // Optional: Set a fixed size for the widget
-    setFixedSize(201, 200);
+    setFixedSize(151, 150);
 }
 
 void StatusWidget::paintEvent(QPaintEvent *event)
@@ -21,7 +21,7 @@ void StatusWidget::paintEvent(QPaintEvent *event)
     painter.setPen(Qt::NoPen);
 
     // Draw the main circle
-    painter.drawEllipse(rect().center(), 100, 100);
+    painter.drawEllipse(rect().center(), 75, 75);
 
     // Set up the brush for the holes
     QBrush holeBrush(Qt::white);
