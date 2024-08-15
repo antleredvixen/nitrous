@@ -43,9 +43,11 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Katie/Code/antleredv
 set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/EWIEGA46WW/moc_mainwindow.cpp"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/EWIEGA46WW/moc_statuswidget.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/mocs_compilation.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/main.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.cpp"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -67,6 +69,7 @@ set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/include/ui_mainwindow.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.h"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

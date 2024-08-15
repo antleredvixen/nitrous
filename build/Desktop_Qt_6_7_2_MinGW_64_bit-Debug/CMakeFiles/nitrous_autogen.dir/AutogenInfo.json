@@ -272,6 +272,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.h",
+			"MU",
+			"EWIEGA46WW/moc_statuswidget.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -348,6 +354,11 @@
 		[ "C:/Users/Katie/Code/antleredvixen/nitrous/main.cpp", "MU", null ],
 		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.cpp",
 			"MU",
 			null
 		]

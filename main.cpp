@@ -2,11 +2,14 @@
 
 #include <QApplication>
 #include <QLocale>
+#include <QStyleFactory>
 #include <QTranslator>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    a.setStyle(QStyleFactory::create("fusion"));
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
