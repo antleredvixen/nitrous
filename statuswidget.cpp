@@ -6,7 +6,7 @@
 StatusWidget::StatusWidget(QWidget *parent) : QWidget(parent)
 {
     // Optional: Set a fixed size for the widget
-    setFixedSize(151, 150);
+    setFixedSize(201, 200);
 }
 
 void StatusWidget::paintEvent(QPaintEvent *event)
@@ -21,7 +21,7 @@ void StatusWidget::paintEvent(QPaintEvent *event)
     painter.setPen(Qt::NoPen);
 
     // Draw the main circle
-    painter.drawEllipse(rect().center(), 75, 75);
+    painter.drawEllipse(rect().center(), 100, 100);
 
     // Set up the brush for the holes
     QBrush holeBrush(Qt::white);
@@ -29,20 +29,30 @@ void StatusWidget::paintEvent(QPaintEvent *event)
 
     // Define positions for the hole punches relative to the widget's size
     QPointF holePositions[] = {
-        {0.5, 0.87}, {0.5, 0.79}, {0.5, 0.71}, {0.5, 0.63}, {0.5, 0.37}, {0.5, 0.29}, {0.5, 0.21}, {0.5, 0.13},  // Vertical line
-        {0.13, 0.5}, {0.21, 0.5}, {0.29, 0.5}, {0.37, 0.5}, {0.63, 0.5}, {0.71, 0.5}, {0.79, 0.5}, {0.87, 0.5}   // Horizontal line
+        {0.5, 0.11}, {0.5, 0.19}, {0.5, 0.27}, {0.5, 0.35}, {0.5, 0.65}, {0.5, 0.73}, {0.5, 0.81}, {0.5, 0.89},  // Vertical line
+        {0.11, 0.5}, {0.19, 0.5}, {0.27, 0.5}, {0.35, 0.5}, {0.65, 0.5}, {0.73, 0.5}, {0.81, 0.5}, {0.89, 0.5}   // Horizontal line
     };
 
     // Draw the hole punches
-    int holeRadius = 5;
+    int holeRadius = rect().width() * 0.039;
     for (const QPointF &position : holePositions) {
         QPoint center(rect().width() * position.x(), rect().height() * position.y());
         painter.drawEllipse(center, holeRadius, holeRadius);
     }
 
-    // Set up the brush for the ring
-    QBrush ringBrush(QColor(1320));
+    // Set up the brush for the ring of the play/pause button
+    QBrush ringBrush(QColor(8745568));
     painter.setBrush(ringBrush);
-    painter.setPen(Qt::NoPen);
 
+    // Draw the play/pause button ring
+    int ringRadius = rect().width() * 0.06;
+    painter.drawEllipse(rect().center(), ringRadius, ringRadius);
+
+    // Set up the brush for the play/pause button
+    QBrush buttonBrush(QColor(12888216));
+    painter.setBrush(buttonBrush);
+
+    // Draw the play/pause button
+    int buttonRadius = rect().width() * 0.055;
+    painter.drawEllipse(rect().center(), buttonRadius, buttonRadius);
 }
