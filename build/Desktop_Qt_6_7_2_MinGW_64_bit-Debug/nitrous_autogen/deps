@@ -600,12 +600,12 @@ nitrous_autogen/timestamp: \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
-	C:/Users/Katie/Code/antleredvixen/nitrous/main.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.h \
-	C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.h \
-	C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.h \
-	C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.ui \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

@@ -244,21 +244,21 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.h",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"UVLADIE3JM/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.h",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h",
 			"MU",
-			"EWIEGA46WW/moc_statuswidget.cpp",
+			"UVLADIE3JM/moc_statuswidget.cpp",
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.h",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h",
 			"MU",
-			"EWIEGA46WW/moc_stemplayerdetector.cpp",
+			"UVLADIE3JM/moc_stemplayerdetector.cpp",
 			null
 		]
 	],
@@ -288,7 +288,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include",
+		"C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include",
 		"C:/Qt/6.7.2/mingw_64/include/QtCore",
 		"C:/Qt/6.7.2/mingw_64/include",
 		"C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++",
@@ -334,19 +334,19 @@
 	"SETTINGS_FILE" : "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/nitrous_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "C:/Users/Katie/Code/antleredvixen/nitrous/main.cpp", "MU", null ],
+		[ "C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp", "MU", null ],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.cpp",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.cpp",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.cpp",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.cpp",
 			"MU",
 			null
 		]

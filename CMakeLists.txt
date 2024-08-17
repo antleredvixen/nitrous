@@ -11,29 +11,29 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
 
-set(LIBUSB_INCLUDE_DIR "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include")
-set(LIBUSB_LIBRARY "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/MinGW64/static/libusb-1.0.a")
+set(LIBUSB_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/libusb-1.0.27/include")
+set(LIBUSB_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/lib/libusb-1.0.27/MinGW64/static/libusb-1.0.a")
 
-set(TS_FILES nitrous_en_US.ts)
+set(TS_FILES "${CMAKE_CURRENT_SOURCE_DIR}/locale/nitrous_en_US.ts")
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        src/main.cpp
+        src/mainwindow.cpp
+        src/mainwindow.h
+        src/mainwindow.ui
         ${TS_FILES}
 )
 
-set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/nitrous.rc")
+set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/resources/icon.rc")
 
 qt_add_executable(nitrous
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        statuswidget.h
-        statuswidget.cpp
+        src/statuswidget.h
+        src/statuswidget.cpp
+        src/stemplayerdetector.h
+        src/stemplayerdetector.cpp
         ${app_icon_resource_windows}
-        stemplayerdetector.h
-        stemplayerdetector.cpp
 )
 
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

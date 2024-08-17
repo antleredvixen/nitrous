@@ -52,7 +52,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 31,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
@@ -76,19 +76,19 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 80,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 63,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 13,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
@@ -264,7 +264,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 62,
+				"line" : 41,
 				"parent" : 0
 			}
 		]
@@ -333,7 +333,7 @@
 				},
 				{
 					"backtrace" : 40,
-					"path" : "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include"
+					"path" : "C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include"
 				},
 				{
 					"backtrace" : 14,
@@ -377,7 +377,7 @@
 				1,
 				2,
 				7,
-				10
+				9
 			]
 		},
 		{
@@ -436,7 +436,7 @@
 				},
 				{
 					"backtrace" : 40,
-					"path" : "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include"
+					"path" : "C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include"
 				},
 				{
 					"backtrace" : 14,
@@ -467,7 +467,7 @@
 			"language" : "RC",
 			"sourceIndexes" : 
 			[
-				8
+				10
 			]
 		}
 	],
@@ -515,7 +515,7 @@
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "C:\\Users\\Katie\\Code\\antleredvixen\\nitrous\\libusb-1.0.27\\MinGW64\\static\\libusb-1.0.a",
+				"fragment" : "C:\\Users\\Katie\\Code\\antleredvixen\\nitrous\\lib\\libusb-1.0.27\\MinGW64\\static\\libusb-1.0.a",
 				"role" : "libraries"
 			},
 			{
@@ -597,7 +597,7 @@
 				1,
 				2,
 				7,
-				8,
+				9,
 				10
 			]
 		},
@@ -607,7 +607,7 @@
 			[
 				3,
 				6,
-				9,
+				8,
 				11
 			]
 		},
@@ -640,62 +640,62 @@
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "src/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "mainwindow.cpp",
+			"path" : "src/mainwindow.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
-			"path" : "mainwindow.h",
+			"path" : "src/mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
-			"path" : "mainwindow.ui",
+			"path" : "src/mainwindow.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
-			"path" : "nitrous_en_US.ts",
+			"path" : "locale/nitrous_en_US.ts",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
-			"path" : "statuswidget.h",
+			"path" : "src/statuswidget.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "statuswidget.cpp",
+			"path" : "src/statuswidget.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/stemplayerdetector.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/stemplayerdetector.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 1,
-			"path" : "nitrous.rc",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
-			"path" : "stemplayerdetector.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "stemplayerdetector.cpp",
+			"path" : "resources/icon.rc",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/include/ui_mainwindow.h",
+			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/include/src/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
