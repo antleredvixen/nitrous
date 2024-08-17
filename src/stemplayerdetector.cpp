@@ -1,3 +1,4 @@
+// stemplayerdetector.cpp
 #include "stemplayerdetector.h"
 
 void StemPlayerDetector::checkStemPlayerConnection(QTextEdit* consoleWindow)
