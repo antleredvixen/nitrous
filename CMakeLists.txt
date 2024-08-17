@@ -9,8 +9,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
 
 set(LIBUSB_INCLUDE_DIR "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include")
 set(LIBUSB_LIBRARY "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/MinGW64/static/libusb-1.0.a")
@@ -27,47 +26,22 @@ set(PROJECT_SOURCES
 
 set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/nitrous.rc")
 
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(nitrous
+qt_add_executable(nitrous
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         statuswidget.h
         statuswidget.cpp
         ${app_icon_resource_windows}
-    )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET nitrous APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
+        stemplayerdetector.h
+        stemplayerdetector.cpp
+)
 
-    qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
-else()
-    if(ANDROID)
-        add_library(nitrous SHARED
-            ${PROJECT_SOURCES}
-        )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-    else()
-        add_executable(nitrous
-            ${PROJECT_SOURCES}
-        )
-    endif()
-
-    qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
-endif()
+qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 target_include_directories(nitrous PRIVATE ${LIBUSB_INCLUDE_DIR})
-target_link_libraries(nitrous PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${LIBUSB_LIBRARY})
+target_link_libraries(nitrous PRIVATE Qt6::Widgets ${LIBUSB_LIBRARY})
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
-if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.nitrous)
-endif()
 set_target_properties(nitrous PROPERTIES
-    ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
@@ -81,6 +55,4 @@ install(TARGETS nitrous
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(nitrous)
-endif()
+qt_finalize_executable(nitrous)

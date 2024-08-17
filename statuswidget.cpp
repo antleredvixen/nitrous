@@ -1,7 +1,4 @@
 #include "statuswidget.h"
-#include <QPainter>
-#include <QBrush>
-#include <QPen>
 
 StatusWidget::StatusWidget(QWidget *parent) : QWidget(parent)
 {

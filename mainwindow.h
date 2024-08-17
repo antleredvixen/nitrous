@@ -2,9 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QDateTime>
 #include <QTextEdit>
 #include <QTimer>
 #include <QStorageInfo>
+#include <QLabel>
+#include "statuswidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,6 +34,8 @@ private:
     QTimer timer;
     bool stemPlayerConnected;
     void checkStemPlayerConnection();
+    QLabel *currentDirectoryLabel;
+    StatusWidget* statusWidget;
 };
 
 #endif // MAINWINDOW_H

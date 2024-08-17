@@ -1,5 +1,6 @@
 C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
@@ -132,6 +133,9 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/QBrush \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/QPainter \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
@@ -144,8 +148,10 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qpainter.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpolygon.h \
@@ -162,10 +168,19 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QHBoxLayout \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTextEdit \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -402,4 +417,5 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.h

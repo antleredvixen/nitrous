@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-f2425b03465d7c46bb54.json",
+					"jsonFile" : "directory-.-Debug-eda642c5ff084f68ef67.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "nitrous::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-nitrous-Debug-9f9b83c11dfb173a3fc7.json",
+					"jsonFile" : "target-nitrous-Debug-5ea92131928cb0a0016b.json",
 					"name" : "nitrous",
 					"projectIndex" : 0
 				},

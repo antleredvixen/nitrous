@@ -2,6 +2,9 @@
 #define STATUSWIDGET_H
 
 #include <QWidget>
+#include <QPainter>
+#include <QBrush>
+#include <QPen>
 
 class StatusWidget : public QWidget
 {

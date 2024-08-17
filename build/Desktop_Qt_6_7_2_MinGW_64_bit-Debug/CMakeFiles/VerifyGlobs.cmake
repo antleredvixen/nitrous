@@ -57,6 +57,7 @@ set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/main.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.cpp"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -82,6 +83,7 @@ set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include/libusb.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.h"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

@@ -66,30 +66,6 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/FindPackageMessage.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/Qt6Targets.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtFeature.cmake",
-		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtFeatureCommon.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicAppleHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicTestHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake",
-		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
-		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake",
 		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake",
 		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake",
 		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
@@ -278,6 +254,12 @@
 			"MU",
 			"EWIEGA46WW/moc_statuswidget.cpp",
 			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.h",
+			"MU",
+			"EWIEGA46WW/moc_stemplayerdetector.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -360,6 +342,11 @@
 		],
 		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/stemplayerdetector.cpp",
 			"MU",
 			null
 		]

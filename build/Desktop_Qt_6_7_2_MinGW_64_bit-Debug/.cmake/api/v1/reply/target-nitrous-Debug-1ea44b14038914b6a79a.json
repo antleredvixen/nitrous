@@ -52,7 +52,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 31,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
@@ -76,19 +76,19 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 78,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 61,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 13,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
@@ -264,7 +264,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 60,
+				"line" : 41,
 				"parent" : 0
 			}
 		]
@@ -376,7 +376,8 @@
 				0,
 				1,
 				2,
-				7
+				7,
+				10
 			]
 		},
 		{
@@ -473,11 +474,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "nitrous_autogen::@6890427a1f51a3e7e1df"
+			"id" : "nitrous_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "nitrous_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "nitrous_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "nitrous::@6890427a1f51a3e7e1df",
@@ -596,7 +597,8 @@
 				1,
 				2,
 				7,
-				8
+				8,
+				10
 			]
 		},
 		{
@@ -605,7 +607,8 @@
 			[
 				3,
 				6,
-				9
+				9,
+				11
 			]
 		},
 		{
@@ -614,14 +617,14 @@
 			[
 				4,
 				5,
-				10
+				12
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				11
+				13
 			]
 		}
 	],
@@ -676,6 +679,17 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 1,
 			"path" : "nitrous.rc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "stemplayerdetector.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "stemplayerdetector.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
