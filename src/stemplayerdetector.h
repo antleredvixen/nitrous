@@ -1,3 +1,4 @@
+// stemplayerdetector.h
 #ifndef STEMPLAYERDETECTOR_H
 #define STEMPLAYERDETECTOR_H
 

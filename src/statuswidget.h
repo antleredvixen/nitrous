@@ -1,3 +1,4 @@
+// statuswidget.h
 #ifndef STATUSWIDGET_H
 #define STATUSWIDGET_H
 
