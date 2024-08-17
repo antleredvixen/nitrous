@@ -53,6 +53,7 @@ set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/EWIEGA46WW/moc_mainwindow.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/EWIEGA46WW/moc_statuswidget.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/mocs_compilation.cpp"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/checkstem.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/main.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/statuswidget.cpp"
@@ -76,6 +77,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Katie/Code/antleredv
 set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/include/ui_mainwindow.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/checkstem.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/examples/source/ezusb.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/libusb-1.0.27/include/libusb.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/mainwindow.h"

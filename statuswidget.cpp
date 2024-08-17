@@ -45,7 +45,7 @@ void StatusWidget::paintEvent(QPaintEvent *event)
     painter.setBrush(ringBrush);
 
     // Draw the play/pause button ring
-    int ringRadius = rect().width() * 0.06;
+    int ringRadius = rect().width() * 0.075;
     painter.drawEllipse(rect().center(), ringRadius, ringRadius);
 
     // Set up the brush for the play/pause button
@@ -53,6 +53,6 @@ void StatusWidget::paintEvent(QPaintEvent *event)
     painter.setBrush(buttonBrush);
 
     // Draw the play/pause button
-    int buttonRadius = rect().width() * 0.055;
+    int buttonRadius = rect().width() * 0.07;
     painter.drawEllipse(rect().center(), buttonRadius, buttonRadius);
 }

@@ -28,7 +28,7 @@ private:
     QTextEdit *consoleWindow;
     QTimer timer;
     bool stemPlayerConnected;
-
+    void checkStemPlayerConnection();
 };
 
 #endif // MAINWINDOW_H
