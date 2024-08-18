@@ -22,7 +22,7 @@ void StatusDisplay::paintEvent(QPaintEvent *event)
     painter.drawEllipse(rect().center(), 75, 75);
 
     // Set up the brush for the holes
-    QBrush holeBrush(Qt::white);
+    QBrush holeBrush(QColor(8745568));
     painter.setBrush(holeBrush);
 
     // Define positions for the hole punches relative to the widget's size
