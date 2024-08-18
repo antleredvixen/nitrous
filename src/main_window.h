@@ -10,8 +10,8 @@
 #include <QTimer>
 #include <QStorageInfo>
 #include <QLabel>
-#include "statuswidget.h"
-#include "stemplayerdetector.h"
+#include "status_display.h"
+#include "device_connection.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -36,8 +36,8 @@ private:
     QTimer timer;
     bool connectionStatus;
     QLabel *currentDirectoryLabel;
-    StatusWidget *statusWidget;
-    Device *detector;
+    StatusDisplay *deviceGraphic;
+    DeviceConnection scan;
 };
 
 #endif // MAINWINDOW_H

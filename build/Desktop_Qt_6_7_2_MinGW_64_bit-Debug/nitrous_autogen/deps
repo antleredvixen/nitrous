@@ -820,12 +820,12 @@ nitrous_autogen/timestamp: \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include/libusb.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.h \
-	C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h \
-	C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.cpp \
-	C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h \
-	C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.ui \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

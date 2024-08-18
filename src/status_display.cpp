@@ -1,13 +1,13 @@
-// statuswidget.cpp
-#include "statuswidget.h"
+// status_display.cpp
+#include "status_display.h"
 
-StatusWidget::StatusWidget(QWidget *parent) : QWidget(parent)
+StatusDisplay::StatusDisplay(QWidget *parent) : QWidget(parent)
 {
     // Optional: Set a fixed size for the widget
     setFixedSize(151, 150);
 }
 
-void StatusWidget::paintEvent(QPaintEvent *event)
+void StatusDisplay::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);
 

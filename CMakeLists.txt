@@ -18,9 +18,9 @@ set(TS_FILES "${CMAKE_CURRENT_SOURCE_DIR}/locale/nitrous_en_US.ts")
 
 set(PROJECT_SOURCES
         src/main.cpp
-        src/mainwindow.cpp
-        src/mainwindow.h
-        src/mainwindow.ui
+        src/main_window.cpp
+        src/main_window.h
+        src/main_window.ui
         ${TS_FILES}
 )
 
@@ -29,10 +29,10 @@ set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/resources/icon.rc")
 qt_add_executable(nitrous
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        src/statuswidget.h
-        src/statuswidget.cpp
-        src/stemplayerdetector.h
-        src/stemplayerdetector.cpp
+        src/status_display.h
+        src/status_display.cpp
+        src/device_connection.h
+        src/device_connection.cpp
         ${app_icon_resource_windows}
 )
 

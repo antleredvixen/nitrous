@@ -1,17 +1,17 @@
-// stemplayerdetector.cpp
-#include "stemplayerdetector.h"
+// device_connection.cpp
+#include "device_connection.h"
 
-void Device::displayConnection(bool &connectionStatus, QTextEdit* consoleWindow)
+void DeviceConnection::displayConnection(bool &connectionStatus, QTextEdit* consoleWindow)
 {
     QString timestamp = QDateTime::currentDateTime().toString("[yyyy-MM-dd HH:mm:ss] ");
-    if (isConnected) {
+    if (connectionStatus == true) {
         consoleWindow->append(timestamp + "<font color='lime'>Stem Player connected!</font>");
     } else {
         consoleWindow->append(timestamp + "<font color='red'>Stem Player not connected.</font>");
     }
 }
 
-void Device::verifyConnection(bool &connectionStatus, QTextEdit* consoleWindow)
+bool DeviceConnection::verifyConnection()
 {
     // Initialize libusb
     libusb_init(NULL);
@@ -20,8 +20,8 @@ void Device::verifyConnection(bool &connectionStatus, QTextEdit* consoleWindow)
     libusb_device **devices;
     ssize_t device_count = libusb_get_device_list(NULL, &devices);
 
-
     // Iterate over the devices and check if the Stem Player is connected
+    bool isConnected = false;
     for (ssize_t i = 0; i < device_count; i++) {
         libusb_device *device = devices[i];
         libusb_device_descriptor descriptor;
@@ -39,9 +39,5 @@ void Device::verifyConnection(bool &connectionStatus, QTextEdit* consoleWindow)
     libusb_free_device_list(devices, 1);
     libusb_exit(NULL);
 
-    // Check if the connection status has changed
-    if (isConnected!= connectionStatus) {
-        connectionStatus = isConnected;
-        displayConnection(connectionStatus, consoleWindow);
-    }
+    return isConnected;
 }

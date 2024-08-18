@@ -244,21 +244,21 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.h",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.h",
 			"MU",
-			"UVLADIE3JM/moc_mainwindow.cpp",
+			"UVLADIE3JM/moc_device_connection.cpp",
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.h",
 			"MU",
-			"UVLADIE3JM/moc_statuswidget.cpp",
+			"UVLADIE3JM/moc_main_window.cpp",
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h",
 			"MU",
-			"UVLADIE3JM/moc_stemplayerdetector.cpp",
+			"UVLADIE3JM/moc_status_display.cpp",
 			null
 		]
 	],
@@ -334,19 +334,19 @@
 	"SETTINGS_FILE" : "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/nitrous_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.cpp",
+			"MU",
+			null
+		],
 		[ "C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp", "MU", null ],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.cpp",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.cpp",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.cpp",
 			"MU",
 			null
 		]

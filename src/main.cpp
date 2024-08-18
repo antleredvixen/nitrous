@@ -3,7 +3,7 @@
 #include <QLocale>
 #include <QStyleFactory>
 #include <QTranslator>
-#include "mainwindow.h"
+#include "main_window.h"
 
 int main(int argc, char *argv[])
 {
