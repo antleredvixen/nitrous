@@ -1,5 +1,5 @@
 # Nitrous
-C++ GUI Device Manager for Kano Stem Player
+Device Content Manager for Kano Stem Player written in C++ using Qt
 
 Nitrous is a third party solution that makes managing the content on Stem Player devices significantly easier to do. Not only is it an offline tool that is significantly more streamlined for managing the content on the stem player, but it ensures that managing your stem player remains possible well into the future.
 
