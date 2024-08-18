@@ -4,6 +4,13 @@
 #include "status_display.h"
 #include "device_connection.h"
 #include "current_directory.h"
+#include "preferences.h"
+
+void MainWindow::showPreferences()
+{
+    Preferences preferences;
+    preferences.exec();
+}
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -72,6 +79,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionOpen, &QAction::triggered, this, [this]() {
         openFolder(currentDirectoryLabel, this, contentBrowser);
     });
+
+    connect(ui->actionPreferences, SIGNAL(triggered()), this, SLOT(showPreferences()));
 }
 
 void MainWindow::deviceConnection() {

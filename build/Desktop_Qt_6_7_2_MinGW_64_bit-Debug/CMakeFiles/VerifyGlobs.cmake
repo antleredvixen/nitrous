@@ -58,6 +58,7 @@ set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/UVLADIE3JM/moc_display_device.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/UVLADIE3JM/moc_main_window.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/UVLADIE3JM/moc_mainwindow.cpp"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/UVLADIE3JM/moc_preferences.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/UVLADIE3JM/moc_status_display.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/UVLADIE3JM/moc_statuswidget.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/mocs_compilation.cpp"
@@ -66,6 +67,7 @@ set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.cpp"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/src/preferences.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -94,6 +96,7 @@ set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/current_directory.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.h"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/src/preferences.h"
   "C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

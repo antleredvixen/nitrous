@@ -172,6 +172,8 @@ nitrous_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qvalidator.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QComboBox \
+	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QHBoxLayout \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QListWidget \
@@ -185,6 +187,8 @@ nitrous_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractslider.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qboxlayout.h \
+	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qcombobox.h \
+	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgridlayout.h \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
@@ -846,6 +850,8 @@ nitrous_autogen/timestamp: \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.cpp \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/preferences.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/preferences.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.cpp \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.ui \

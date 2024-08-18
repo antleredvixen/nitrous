@@ -26,6 +26,7 @@ public:
     QAction *actionAbout;
     QAction *actionPreferences;
     QAction *actionOpen;
+    QAction *actionExport_PRODDATA_DAT;
     QWidget *centralwidget;
     QMenuBar *menubar;
     QMenu *menuFile;
@@ -46,6 +47,8 @@ public:
         actionPreferences->setObjectName("actionPreferences");
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName("actionOpen");
+        actionExport_PRODDATA_DAT = new QAction(MainWindow);
+        actionExport_PRODDATA_DAT->setObjectName("actionExport_PRODDATA_DAT");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         MainWindow->setCentralWidget(centralwidget);
@@ -68,6 +71,8 @@ public:
         menubar->addAction(menuEdit->menuAction());
         menubar->addAction(menuHelp->menuAction());
         menuFile->addAction(actionOpen);
+        menuFile->addSeparator();
+        menuFile->addAction(actionExport_PRODDATA_DAT);
         menuHelp->addAction(actionAbout);
         menuEdit->addAction(actionPreferences);
 
@@ -82,6 +87,7 @@ public:
         actionAbout->setText(QCoreApplication::translate("MainWindow", "About", nullptr));
         actionPreferences->setText(QCoreApplication::translate("MainWindow", "Preferences...", nullptr));
         actionOpen->setText(QCoreApplication::translate("MainWindow", "Open", nullptr));
+        actionExport_PRODDATA_DAT->setText(QCoreApplication::translate("MainWindow", "Export PRODDATA.DAT", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuHelp->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
