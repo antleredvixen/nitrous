@@ -1,6 +1,6 @@
-// mainwindow.h
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+// main_window.h
+#ifndef MAIN_WINDOW_H
+#define MAIN_WINDOW_H
 
 #include <QMainWindow>
 #include <QVBoxLayout>
@@ -40,4 +40,4 @@ private:
     DeviceConnection scan;
 };
 
-#endif // MAINWINDOW_H
+#endif // MAIN_WINDOW_H
