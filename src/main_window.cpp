@@ -1,15 +1,20 @@
-// main_window.cpp
 #include "./ui_main_window.h"
 #include "main_window.h"
 #include "status_display.h"
 #include "device_connection.h"
 #include "current_directory.h"
 #include "preferences.h"
+#include "about_window.h"
 
 void MainWindow::showPreferences()
 {
     Preferences preferences(deviceGraphic);
     preferences.exec();
+}
+
+void MainWindow::showAbout() {
+    AboutWindow aboutWindow;
+    aboutWindow.exec();
 }
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -21,15 +26,15 @@ MainWindow::MainWindow(QWidget *parent) :
     currentDirectoryLabel(new QLabel),
     deviceGraphic(new StatusDisplay),
     scan(),
-    contentBrowser(new ContentBrowser(this))
+    contentBrowser(new ContentBrowser)
 {
     ui->setupUi(this);
 
-    consoleWindow = new QTextEdit(this);
+    consoleWindow = new QTextEdit;
     consoleWindow->setReadOnly(true);
 
     // Create the device graphic
-    deviceGraphic = new StatusDisplay(this);
+    deviceGraphic = new StatusDisplay;
 
     // Create a vertical layout for the central widget
     QVBoxLayout *vboxLayout = new QVBoxLayout(ui->centralwidget);
@@ -63,7 +68,7 @@ MainWindow::MainWindow(QWidget *parent) :
     vboxLayout->addLayout(statusDisplayLayout);
 
     // Create a label to display the current directory
-    currentDirectoryLabel = new QLabel(this);
+    currentDirectoryLabel = new QLabel;
 
     // Add the label to the vboxLayout
     vboxLayout->addWidget(currentDirectoryLabel);
@@ -80,7 +85,8 @@ MainWindow::MainWindow(QWidget *parent) :
         openFolder(currentDirectoryLabel, this, contentBrowser);
     });
 
-    connect(ui->actionPreferences, SIGNAL(triggered()), this, SLOT(showPreferences()));
+    connect(ui->actionPreferences, &QAction::triggered, this, &MainWindow::showPreferences);
+    connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::showAbout);
 }
 
 void MainWindow::deviceConnection() {

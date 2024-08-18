@@ -1,7 +1,9 @@
 nitrous_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/QDir \
+	C:/Qt/6.7.2/mingw_64/include/QtCore/QFile \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
+	C:/Qt/6.7.2/mingw_64/include/QtCore/QTextStream \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
@@ -140,6 +142,7 @@ nitrous_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/QColor \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/QPainter \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
+	C:/Qt/6.7.2/mingw_64/include/QtGui/QPixmap \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
 	C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
@@ -180,6 +183,7 @@ nitrous_autogen/timestamp: \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QListWidget \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QPushButton \
+	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTabWidget \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTextEdit \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout \
 	C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
@@ -845,6 +849,8 @@ nitrous_autogen/timestamp: \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include/libusb.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/about_window.cpp \
+	C:/Users/Katie/Code/antleredvixen/nitrous/src/about_window.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.cpp \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/current_directory.cpp \

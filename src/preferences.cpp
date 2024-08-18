@@ -22,7 +22,7 @@ Preferences::Preferences(StatusDisplay* statusDisplay, QWidget *parent) : QDialo
     okButton = new QPushButton("OK");
     cancelButton = new QPushButton("Cancel");
 
-    applyButton->setEnabled(false); // Disable the Apply button by default
+    applyButton->setEnabled(false);
 
     QHBoxLayout *layout = new QHBoxLayout;
     layout->addStretch();

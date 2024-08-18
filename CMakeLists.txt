@@ -40,6 +40,8 @@ qt_add_executable(nitrous
         src/content_browser.cpp
         src/preferences.h
         src/preferences.cpp
+        src/about_window.h
+        src/about_window.cpp
 )
 
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

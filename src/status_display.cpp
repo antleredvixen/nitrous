@@ -5,7 +5,7 @@ StatusDisplay::StatusDisplay(QWidget *parent) : QWidget(parent)
 {
     setFixedSize(151, 150);
     mCurrentColorOption = ColorOption::Tan;
-    mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568); // default to Tan color
+    mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568);
 }
 
 void StatusDisplay::setColorOption(ColorOption option)
@@ -16,16 +16,16 @@ void StatusDisplay::setColorOption(ColorOption option)
         mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568);
         break;
     case ColorOption::Green:
-        mCurrentColors = QList<QColor>() << QColor(3107155) << QColor(2644037); // green color
+        mCurrentColors = QList<QColor>() << QColor(3107155) << QColor(2644037);
         break;
     case ColorOption::Clear:
-        mCurrentColors = QList<QColor>() << QColor(14737375) << QColor(14013395); // white color
+        mCurrentColors = QList<QColor>() << QColor(14737375) << QColor(14013395);
         break;
     case ColorOption::Black:
-        mCurrentColors = QList<QColor>() << QColor(4605510) << QColor(3684408); // black color
+        mCurrentColors = QList<QColor>() << QColor(4605510) << QColor(3684408);
         break;
     }
-    update(); // trigger repaint
+    update();
 }
 
 void StatusDisplay::paintEvent(QPaintEvent *event)

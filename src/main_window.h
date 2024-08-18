@@ -1,4 +1,3 @@
-// main_window.h
 #ifndef MAIN_WINDOW_H
 #define MAIN_WINDOW_H
 
@@ -13,6 +12,7 @@
 #include "status_display.h"
 #include "device_connection.h"
 #include "content_browser.h"
+#include "about_window.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -31,6 +31,7 @@ public:
 private slots:
     void deviceConnection();
     void showPreferences();
+    void showAbout();
 
 private:
     Ui::MainWindow *ui;
@@ -41,6 +42,7 @@ private:
     StatusDisplay *deviceGraphic;
     DeviceConnection scan;
     ContentBrowser *contentBrowser;
+    AboutWindow *aboutWindow;
 };
 
 #endif // MAIN_WINDOW_H
