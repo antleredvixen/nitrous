@@ -29,31 +29,31 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Create a vertical layout for the contentBrowser
     QVBoxLayout *contentBrowserLayout = new QVBoxLayout;
-    contentBrowser->setMinimumSize(150, 150); // Replace with desired size
-    contentBrowser->setMaximumWidth(150); // Set the maximum width of the contentBrowser
-    contentBrowser->setMinimumWidth(150); // Set the minimum width of the contentBrowser
+    contentBrowser->setMinimumSize(150, 150);
+    contentBrowser->setMaximumWidth(150);
+    contentBrowser->setMinimumWidth(150);
     contentBrowserLayout->addWidget(contentBrowser);
 
     // Add the contentBrowser layout to the vboxLayout
     vboxLayout->addLayout(contentBrowserLayout);
 
     // Create a horizontal layout for the status display and console window
-    QHBoxLayout *statusWidgetLayout = new QHBoxLayout;
+    QHBoxLayout *statusDisplayLayout = new QHBoxLayout;
 
-    // Add the status widget to the statusWidgetLayout
-    statusWidgetLayout->addWidget(deviceGraphic);
+    // Add the device graphic to the statusDisplayLayout
+    statusDisplayLayout->addWidget(deviceGraphic);
 
     // Create a vertical layout for the console window
     QVBoxLayout *consoleLayout = new QVBoxLayout;
-    consoleLayout->addStretch(); // Add a stretchable spacer item
-    consoleWindow->setFixedHeight(deviceGraphic->height() / 2); // Set the height of the console window to half of the status widget's height
+    consoleLayout->addStretch();
+    consoleWindow->setFixedHeight(deviceGraphic->height() / 2);
     consoleLayout->addWidget(consoleWindow);
 
-    // Add the console layout to the statusWidgetLayout
-    statusWidgetLayout->addLayout(consoleLayout);
+    // Add the console layout to the statusDisplayLayout
+    statusDisplayLayout->addLayout(consoleLayout);
 
-    // Add the statusWidgetLayout to the vboxLayout
-    vboxLayout->addLayout(statusWidgetLayout);
+    // Add the statusDisplayLayout to the vboxLayout
+    vboxLayout->addLayout(statusDisplayLayout);
 
     // Create a label to display the current directory
     currentDirectoryLabel = new QLabel(this);
@@ -63,7 +63,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connectionStatus = scan.verifyConnection();
     scan.displayConnection(connectionStatus, consoleWindow);
-    currentDirectory(currentDirectoryLabel, connectionStatus, contentBrowser); // Call the currentDirectory function here
+    currentDirectory(currentDirectoryLabel, connectionStatus, contentBrowser);
 
     timer.setInterval(1000); // Check every second
     connect(&timer, &QTimer::timeout, this, &MainWindow::deviceConnection);
@@ -79,7 +79,7 @@ void MainWindow::deviceConnection() {
     if (newConnectionStatus!= connectionStatus) {
         connectionStatus = newConnectionStatus;
         scan.displayConnection(connectionStatus, consoleWindow);
-        currentDirectory(currentDirectoryLabel, connectionStatus, contentBrowser); // Pass the connectionStatus to currentDirectory
+        currentDirectory(currentDirectoryLabel, connectionStatus, contentBrowser);
     }
 }
 

@@ -34,6 +34,10 @@ qt_add_executable(nitrous
         src/device_connection.h
         src/device_connection.cpp
         ${app_icon_resource_windows}
+        src/current_directory.h
+        src/current_directory.cpp
+        src/content_browser.h
+        src/content_browser.cpp
 )
 
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

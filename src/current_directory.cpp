@@ -7,18 +7,16 @@ void currentDirectory(QLabel *label, bool connectionStatus, ContentBrowser *cont
         // Get a list of all storage drives
         QList<QStorageInfo> storageDrives = QStorageInfo::mountedVolumes();
 
-        // Iterate over the drives and check if the drive is labeled "STEM PLAYER"
+        // Iterate over the drives and check if the drive is labeled
         for (const QStorageInfo &drive : storageDrives) {
             if (drive.name() == "STEM PLAYER") {
-                // Update the label with the root directory of the drive
+                // Update the current directory label with the root directory of the drive
                 label->setText(drive.rootPath());
                 contentBrowser->populateList(drive.rootPath());
                 return;
             }
         }
 
-        // If no drive is found, display a default message
-        label->setText("STEM PLAYER not found");
     } else {
         // Display the current working directory
         label->setText(QDir::currentPath());

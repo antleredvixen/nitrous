@@ -244,6 +244,18 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.h",
+			"MU",
+			"UVLADIE3JM/moc_content_browser.cpp",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/current_directory.h",
+			"MU",
+			"UVLADIE3JM/moc_current_directory.cpp",
+			null
+		],
+		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.h",
 			"MU",
 			"UVLADIE3JM/moc_device_connection.cpp",
@@ -334,6 +346,16 @@
 	"SETTINGS_FILE" : "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/nitrous_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/current_directory.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.cpp",
 			"MU",
