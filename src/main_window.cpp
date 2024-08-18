@@ -3,6 +3,7 @@
 #include "main_window.h"
 #include "status_display.h"
 #include "device_connection.h"
+#include "current_directory.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -57,17 +58,21 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Create a label to display the current directory
     currentDirectoryLabel = new QLabel(this);
-    currentDirectoryLabel->setText(QDir::currentPath());
 
     // Add the label to the main layout
     vboxLayout->addWidget(currentDirectoryLabel);
 
     connectionStatus = scan.verifyConnection();
     scan.displayConnection(connectionStatus, consoleWindow);
+    currentDirectory(currentDirectoryLabel, connectionStatus); // Call the currentDirectory function here
 
     timer.setInterval(1000); // Check every second
     connect(&timer, &QTimer::timeout, this, &MainWindow::deviceConnection);
     timer.start();
+
+    connect(ui->actionOpen, &QAction::triggered, this, [this]() {
+        openFolder(currentDirectoryLabel, this);
+    });
 }
 
 void MainWindow::deviceConnection() {
@@ -75,8 +80,10 @@ void MainWindow::deviceConnection() {
     if (newConnectionStatus!= connectionStatus) {
         connectionStatus = newConnectionStatus;
         scan.displayConnection(connectionStatus, consoleWindow);
+        currentDirectory(currentDirectoryLabel, connectionStatus); // Pass the connectionStatus to currentDirectory
     }
 }
+
 
 MainWindow::~MainWindow()
 {
