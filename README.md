@@ -16,5 +16,5 @@ In 2021 Kanye West collaborated with Kano Tech to release the Stem Player, a mus
 ## Future Plans
 If for some reason you're reading this project page this early in development, then I just wanna thank you for stopping by and I assure you I intend on writing proper technical documentation here as well as a feature overview to help guide users on how this tool is intended to be used. <3
 
-### Disclaimer
+## DISCLAIMER
 This tool is an independent project and is not affiliated with, endorsed by, or associated with Kano Computing or Yeezy Tech. All trademarks and product names are the property of their respective owners.
