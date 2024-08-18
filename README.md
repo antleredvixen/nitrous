@@ -6,7 +6,7 @@ Nitrous is a third party solution that makes managing the content on Stem Player
 ## About
 In 2021 Kanye West collaborated with Kano Tech to release the Stem Player, a music player device that can play songs that have been separated into 4 separate stem tracks that are all individually toggleable. Stems are layers in a music track of instruments that are grouped together typically by the type of instrument or sound that it is. The only way to manage the content on the device is by plugging the stem player into your PC via USB and then going to a website in a Chrome based browser that let's you manage what is on the device, however the official management tool is generally regarded as clunky and limited in functionality.
 
-# Features
+## Features
 - Edit album & track data
 - Backup & Restore device
 - Backup proddata
