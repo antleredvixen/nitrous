@@ -7,8 +7,9 @@
 #include <QDir>
 #include <QStorageInfo>
 #include <QFileDialog>
+#include "content_browser.h"
 
-void currentDirectory(QLabel *label, bool connectionStatus);
-void openFolder(QLabel *label, QMainWindow *mainWindow);
+void currentDirectory(QLabel *label, bool connectionStatus, ContentBrowser *contentBrowser);
+void openFolder(QLabel *label, QMainWindow *mainWindow, ContentBrowser *contentBrowser);
 
 #endif // CURRENT_DIRECTORY_H

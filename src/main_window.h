@@ -12,6 +12,7 @@
 #include <QLabel>
 #include "status_display.h"
 #include "device_connection.h"
+#include "content_browser.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -38,6 +39,7 @@ private:
     QLabel *currentDirectoryLabel;
     StatusDisplay *deviceGraphic;
     DeviceConnection scan;
+    ContentBrowser *contentBrowser;
 };
 
 #endif // MAIN_WINDOW_H

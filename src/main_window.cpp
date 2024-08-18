@@ -13,7 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connectionStatus(false),
     currentDirectoryLabel(new QLabel),
     deviceGraphic(new StatusDisplay),
-    scan()
+    scan(),
+    contentBrowser(new ContentBrowser(this))
 {
     ui->setupUi(this);
 
@@ -26,52 +27,50 @@ MainWindow::MainWindow(QWidget *parent) :
     // Create a vertical layout for the central widget
     QVBoxLayout *vboxLayout = new QVBoxLayout(ui->centralwidget);
 
-    // Add a stretch to push the widgets below to the bottom
-    vboxLayout->addStretch();
+    // Create a vertical layout for the contentBrowser
+    QVBoxLayout *contentBrowserLayout = new QVBoxLayout;
+    contentBrowser->setMinimumSize(150, 150); // Replace with desired size
+    contentBrowser->setMaximumWidth(150); // Set the maximum width of the contentBrowser
+    contentBrowser->setMinimumWidth(150); // Set the minimum width of the contentBrowser
+    contentBrowserLayout->addWidget(contentBrowser);
 
-    // Create a horizontal layout for the statusWidget and consoleWindow
-    QHBoxLayout *statusHBoxLayout = new QHBoxLayout;
-    statusHBoxLayout->addWidget(deviceGraphic);
-    statusHBoxLayout->addWidget(consoleWindow);
+    // Add the contentBrowser layout to the vboxLayout
+    vboxLayout->addLayout(contentBrowserLayout);
 
-    // Set a fixed height for the consoleWindow widget
-    consoleWindow->setFixedHeight(80); // Replace with desired height
+    // Create a horizontal layout for the status display and console window
+    QHBoxLayout *statusWidgetLayout = new QHBoxLayout;
 
-    // Create a vertical layout for the statusWidget to push it to the bottom
-    QVBoxLayout *statusVBoxLayout = new QVBoxLayout;
-    statusVBoxLayout->addStretch();
-    statusVBoxLayout->addWidget(deviceGraphic);
+    // Add the status widget to the statusWidgetLayout
+    statusWidgetLayout->addWidget(deviceGraphic);
 
-    // Create a vertical layout for the consoleWindow to push it to the bottom
-    QVBoxLayout *consoleVBoxLayout = new QVBoxLayout;
-    consoleVBoxLayout->addStretch();
-    consoleVBoxLayout->addWidget(consoleWindow);
+    // Create a vertical layout for the console window
+    QVBoxLayout *consoleLayout = new QVBoxLayout;
+    consoleLayout->addStretch(); // Add a stretchable spacer item
+    consoleWindow->setFixedHeight(deviceGraphic->height() / 2); // Set the height of the console window to half of the status widget's height
+    consoleLayout->addWidget(consoleWindow);
 
-    // Replace the widgets in the statusHBoxLayout with the new vertical layouts
-    statusHBoxLayout->removeWidget(deviceGraphic);
-    statusHBoxLayout->removeWidget(consoleWindow);
-    statusHBoxLayout->addLayout(statusVBoxLayout);
-    statusHBoxLayout->addLayout(consoleVBoxLayout);
+    // Add the console layout to the statusWidgetLayout
+    statusWidgetLayout->addLayout(consoleLayout);
 
-    // Add the statusHBoxLayout to the central widget layout
-    vboxLayout->addLayout(statusHBoxLayout);
+    // Add the statusWidgetLayout to the vboxLayout
+    vboxLayout->addLayout(statusWidgetLayout);
 
     // Create a label to display the current directory
     currentDirectoryLabel = new QLabel(this);
 
-    // Add the label to the main layout
+    // Add the label to the vboxLayout
     vboxLayout->addWidget(currentDirectoryLabel);
 
     connectionStatus = scan.verifyConnection();
     scan.displayConnection(connectionStatus, consoleWindow);
-    currentDirectory(currentDirectoryLabel, connectionStatus); // Call the currentDirectory function here
+    currentDirectory(currentDirectoryLabel, connectionStatus, contentBrowser); // Call the currentDirectory function here
 
     timer.setInterval(1000); // Check every second
     connect(&timer, &QTimer::timeout, this, &MainWindow::deviceConnection);
     timer.start();
 
     connect(ui->actionOpen, &QAction::triggered, this, [this]() {
-        openFolder(currentDirectoryLabel, this);
+        openFolder(currentDirectoryLabel, this, contentBrowser);
     });
 }
 
@@ -80,10 +79,9 @@ void MainWindow::deviceConnection() {
     if (newConnectionStatus!= connectionStatus) {
         connectionStatus = newConnectionStatus;
         scan.displayConnection(connectionStatus, consoleWindow);
-        currentDirectory(currentDirectoryLabel, connectionStatus); // Pass the connectionStatus to currentDirectory
+        currentDirectory(currentDirectoryLabel, connectionStatus, contentBrowser); // Pass the connectionStatus to currentDirectory
     }
 }
-
 
 MainWindow::~MainWindow()
 {
