@@ -6,6 +6,7 @@
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
+#include <QColor>
 
 class StatusDisplay : public QWidget
 {
@@ -14,8 +15,16 @@ class StatusDisplay : public QWidget
 public:
     explicit StatusDisplay(QWidget *parent = nullptr);
 
+    enum class ColorOption { Tan, Green, Clear, Black };
+
+    void setColorOption(ColorOption option);
+
 protected:
     void paintEvent(QPaintEvent *event) override;
+
+private:
+    ColorOption mCurrentColorOption;
+    QList<QColor> mCurrentColors;
 };
 
 #endif // STATUS_DISPLAY_H

@@ -118,6 +118,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QBrush \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/QColor \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \

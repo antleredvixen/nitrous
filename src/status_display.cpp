@@ -4,6 +4,28 @@
 StatusDisplay::StatusDisplay(QWidget *parent) : QWidget(parent)
 {
     setFixedSize(151, 150);
+    mCurrentColorOption = ColorOption::Tan;
+    mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568); // default to Tan color
+}
+
+void StatusDisplay::setColorOption(ColorOption option)
+{
+    mCurrentColorOption = option;
+    switch (option) {
+    case ColorOption::Tan:
+        mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568);
+        break;
+    case ColorOption::Green:
+        mCurrentColors = QList<QColor>() << QColor(3107155) << QColor(2644037); // green color
+        break;
+    case ColorOption::Clear:
+        mCurrentColors = QList<QColor>() << QColor(14737375) << QColor(14013395); // white color
+        break;
+    case ColorOption::Black:
+        mCurrentColors = QList<QColor>() << QColor(4605510) << QColor(3684408); // black color
+        break;
+    }
+    update(); // trigger repaint
 }
 
 void StatusDisplay::paintEvent(QPaintEvent *event)
@@ -13,7 +35,7 @@ void StatusDisplay::paintEvent(QPaintEvent *event)
     QPainter painter(this);
 
     // Set up the brush for the main circle
-    QBrush brush(QColor(12888216));
+    QBrush brush(mCurrentColors.first());
     painter.setBrush(brush);
     painter.setPen(Qt::NoPen);
 
@@ -21,7 +43,7 @@ void StatusDisplay::paintEvent(QPaintEvent *event)
     painter.drawEllipse(rect().center(), 75, 75);
 
     // Set up the brush for the hole punches
-    QBrush holeBrush(QColor(8745568));
+    QBrush holeBrush(mCurrentColors.last());
     painter.setBrush(holeBrush);
 
     // Define positions for the hole punches
@@ -38,7 +60,7 @@ void StatusDisplay::paintEvent(QPaintEvent *event)
     }
 
     // Set up the brush for the ring
-    QBrush ringBrush(QColor(8745568));
+    QBrush ringBrush(mCurrentColors.last());
     painter.setBrush(ringBrush);
 
     // Draw the ring
@@ -46,7 +68,7 @@ void StatusDisplay::paintEvent(QPaintEvent *event)
     painter.drawEllipse(rect().center(), ringRadius, ringRadius);
 
     // Set up the brush button
-    QBrush buttonBrush(QColor(12888216));
+    QBrush buttonBrush(mCurrentColors.first());
     painter.setBrush(buttonBrush);
 
     // Draw the button

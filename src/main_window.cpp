@@ -8,7 +8,7 @@
 
 void MainWindow::showPreferences()
 {
-    Preferences preferences;
+    Preferences preferences(deviceGraphic);
     preferences.exec();
 }
 
@@ -37,8 +37,8 @@ MainWindow::MainWindow(QWidget *parent) :
     // Create a vertical layout for the contentBrowser
     QVBoxLayout *contentBrowserLayout = new QVBoxLayout;
     contentBrowser->setMinimumSize(150, 150);
-    contentBrowser->setMaximumWidth(150);
-    contentBrowser->setMinimumWidth(150);
+    contentBrowser->setMaximumWidth(deviceGraphic->width());
+    contentBrowser->setMinimumWidth(deviceGraphic->width());
     contentBrowserLayout->addWidget(contentBrowser);
 
     // Add the contentBrowser layout to the vboxLayout

@@ -13,7 +13,6 @@
 #include "status_display.h"
 #include "device_connection.h"
 #include "content_browser.h"
-#include "preferences.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
