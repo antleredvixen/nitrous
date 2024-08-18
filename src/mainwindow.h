@@ -11,6 +11,7 @@
 #include <QStorageInfo>
 #include <QLabel>
 #include "statuswidget.h"
+#include "stemplayerdetector.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -27,16 +28,16 @@ public:
     ~MainWindow();
 
 private slots:
-    void checkForStemPlayer();
+    void deviceConnection();
 
 private:
     Ui::MainWindow *ui;
     QTextEdit *consoleWindow;
     QTimer timer;
-    bool stemPlayerConnected;
-    void checkStemPlayerConnection();
+    bool connectionStatus;
     QLabel *currentDirectoryLabel;
-    StatusWidget* statusWidget;
+    StatusWidget *statusWidget;
+    Device *detector;
 };
 
 #endif // MAINWINDOW_H

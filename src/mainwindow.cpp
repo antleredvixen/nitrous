@@ -7,7 +7,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , stemPlayerConnected(false) // Initialize the connection status to false
+    , connectionStatus(false) // Initialize the connection status to false
 {
     ui->setupUi(this);
 
@@ -57,21 +57,21 @@ MainWindow::MainWindow(QWidget *parent)
     // Add the label to the main layout
     vboxLayout->addWidget(currentDirectoryLabel);
 
-    StemPlayerDetector detector;
-    detector.checkStemPlayerConnection(consoleWindow);
+    Device detector;
+    detector.displayConnection(connectionStatus, consoleWindow);
 
     timer.setInterval(1000); // Check every second
-    connect(&timer, &QTimer::timeout, this, &MainWindow::checkForStemPlayer);
+    connect(&timer, &QTimer::timeout, this, &MainWindow::deviceConnection);
     timer.start();
+}
+
+void MainWindow::deviceConnection()
+{
+    Device detector;
+    detector.verifyConnection(connectionStatus, consoleWindow);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::checkForStemPlayer()
-{
-    StemPlayerDetector detector;
-    detector.checkForStemPlayer(stemPlayerConnected, consoleWindow);
 }
