@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>LICENSE</file>
+        <file>nitrous.png</file>
+        <file>../LICENSE</file>
     </qresource>
 </RCC>

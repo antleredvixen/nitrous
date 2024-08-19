@@ -22,11 +22,11 @@ public:
 
 private:
     QTabWidget *tabWidget;
-    QWidget *nitrousTab;
+    QWidget *versionTab;
     QWidget *legalTab;
-    QLabel *nitrousImage;
-    QLabel *nitrousHeading;
-    QLabel *nitrousLabel;
+    QLabel *versionImage;
+    QLabel *versionLabel;
+    QLabel *aboutLabel;
     QLabel *copyrightLabel;
     QLabel *disclaimerLabel;
     QTextEdit *legalText;

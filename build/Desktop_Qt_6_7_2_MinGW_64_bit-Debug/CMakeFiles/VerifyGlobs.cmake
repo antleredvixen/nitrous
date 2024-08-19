@@ -50,6 +50,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Katie/Code/antleredvixen/nitrous/*.cpp")
 set(OLD_GLOB
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+  "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/6YEA5652QU/moc_mainwindow.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/6YEA5652QU/moc_statuswidget.cpp"
   "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/EWIEGA46WW/moc_mainwindow.cpp"

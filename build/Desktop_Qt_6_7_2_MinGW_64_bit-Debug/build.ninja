@@ -248,7 +248,7 @@ build nitrous_autogen/timestamp nitrous_autogen/mocs_compilation.cpp | ${cmake_n
 #############################################
 # Custom command for nitrous_autogen\3YJK5W5UP7\qrc_resources.cpp
 
-build nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp | ${cmake_ninja_workdir}nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp: CUSTOM_COMMAND C$:/Users/Katie/Code/antleredvixen/nitrous/resources/resources.qrc CMakeFiles/nitrous_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json C$:/Users/Katie/Code/antleredvixen/nitrous/resources/LICENSE C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe || nitrous_autogen nitrous_autogen_timestamp_deps
+build nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp | ${cmake_ninja_workdir}nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp: CUSTOM_COMMAND C$:/Users/Katie/Code/antleredvixen/nitrous/resources/resources.qrc CMakeFiles/nitrous_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json C$:/Users/Katie/Code/antleredvixen/nitrous/LICENSE C$:/Users/Katie/Code/antleredvixen/nitrous/resources/nitrous.png C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe C$:/Qt/6.7.2/mingw_64/./bin/rcc.exe || nitrous_autogen nitrous_autogen_timestamp_deps
   COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Katie\Code\antleredvixen\nitrous\build\Desktop_Qt_6_7_2_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/nitrous_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json Debug"
   DESC = Automatic RCC for resources/resources.qrc
   restat = 1

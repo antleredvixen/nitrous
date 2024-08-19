@@ -29,22 +29,22 @@ set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/resources/icon.rc")
 set(resources "${CMAKE_CURRENT_SOURCE_DIR}/resources/resources.qrc")
 
 qt_add_executable(nitrous
-        MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
-        src/status_display.h
-        src/status_display.cpp
-        src/device_connection.h
-        src/device_connection.cpp
-        ${app_icon_resource_windows}
-        src/current_directory.h
-        src/current_directory.cpp
-        src/content_browser.h
-        src/content_browser.cpp
-        src/preferences.h
-        src/preferences.cpp
-        src/about_window.h
-        src/about_window.cpp
-        ${resources}
+    MANUAL_FINALIZATION
+    ${PROJECT_SOURCES}
+    src/status_display.h
+    src/status_display.cpp
+    src/device_connection.h
+    src/device_connection.cpp
+    ${app_icon_resource_windows}
+    src/current_directory.h
+    src/current_directory.cpp
+    src/content_browser.h
+    src/content_browser.cpp
+    src/preferences.h
+    src/preferences.cpp
+    src/about_window.h
+    src/about_window.cpp
+    ${resources}
 )
 
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

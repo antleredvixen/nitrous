@@ -849,6 +849,7 @@ nitrous_autogen/timestamp: \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include/libusb.h \
+	C:/Users/Katie/Code/antleredvixen/nitrous/resources/resources.qrc \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/about_window.cpp \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/about_window.h \
 	C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.cpp \

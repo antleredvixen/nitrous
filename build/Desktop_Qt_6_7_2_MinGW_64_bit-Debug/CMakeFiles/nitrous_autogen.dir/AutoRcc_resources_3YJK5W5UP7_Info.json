@@ -7,7 +7,11 @@
 	"CROSS_CONFIG" : false,
 	"GENERATOR" : "Ninja",
 	"INCLUDE_DIR" : "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/include",
-	"INPUTS" : [ "C:/Users/Katie/Code/antleredvixen/nitrous/resources/LICENSE" ],
+	"INPUTS" : 
+	[
+		"C:/Users/Katie/Code/antleredvixen/nitrous/LICENSE",
+		"C:/Users/Katie/Code/antleredvixen/nitrous/resources/nitrous.png"
+	],
 	"LOCK_FILE" : "C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/nitrous_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "--no-zstd", "-name", "resources" ],
