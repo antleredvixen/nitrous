@@ -18,3 +18,11 @@ void ContentBrowser::populateList(const QString &directory)
         listWidget->addItem(file.fileName());
     }
 }
+
+void ContentBrowser::populateList(const QStringList &albumTitles)
+{
+    listWidget->clear();
+    foreach (const QString &title, albumTitles) {
+        listWidget->addItem(title);
+    }
+}

@@ -14,6 +14,7 @@ class ContentBrowser : public QWidget
 public:
     ContentBrowser(QWidget *parent = nullptr);
     void populateList(const QString &directory);
+    void populateList(const QStringList &albumTitles);
 
 private:
     QListWidget *listWidget;

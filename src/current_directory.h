@@ -7,6 +7,8 @@
 #include <QDir>
 #include <QStorageInfo>
 #include <QFileDialog>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include "content_browser.h"
 
 void currentDirectory(QLabel *label, bool connectionStatus, ContentBrowser *contentBrowser);
