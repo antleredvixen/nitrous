@@ -7,6 +7,7 @@
 #include <QBrush>
 #include <QPen>
 #include <QColor>
+#include <QSettings>
 
 class StatusDisplay : public QWidget
 {

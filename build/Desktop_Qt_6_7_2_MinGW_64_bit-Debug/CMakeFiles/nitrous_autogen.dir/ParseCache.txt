@@ -644,6 +644,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.h
+C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/current_directory.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
  mmc:Q_OBJECT
@@ -1002,7 +1003,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
-C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.cpp
@@ -1014,6 +1014,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QDir
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QFile
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QTextStream
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer
@@ -1102,6 +1103,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qscopeguard.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qset.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qsettings.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata_impl.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qsharedpointer.h
@@ -1681,6 +1683,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/main_window.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h
@@ -1754,6 +1757,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qscopeguard.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qset.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qsettings.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata_impl.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qsharedpointer.h
@@ -2459,6 +2463,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/preferences.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h
@@ -2536,6 +2541,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/preferences.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qscopeguard.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qset.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qsettings.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata_impl.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/qsharedpointer.h

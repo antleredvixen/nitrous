@@ -1,4 +1,3 @@
-// main_window.cpp
 #include "./ui_main_window.h"
 #include "main_window.h"
 #include "status_display.h"
@@ -25,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
     timer(),
     connectionStatus(false),
     currentDirectoryLabel(new QLabel),
-    deviceGraphic(new StatusDisplay),
+    deviceGraphic(nullptr),
     scan(),
     contentBrowser(new ContentBrowser)
 {
@@ -35,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
     consoleWindow->setReadOnly(true);
 
     // Create the device graphic
-    deviceGraphic = new StatusDisplay;
+    deviceGraphic = new StatusDisplay(this);
 
     // Create a vertical layout for the central widget
     QVBoxLayout *vboxLayout = new QVBoxLayout(ui->centralwidget);

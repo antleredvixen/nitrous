@@ -7,21 +7,21 @@ AboutWindow::AboutWindow(QWidget *parent) : QDialog(parent)
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    tabWidget = new QTabWidget(this);  // Specify parent to ensure proper memory management
+    tabWidget = new QTabWidget(this);
     mainLayout->addWidget(tabWidget);
 
     // Version tab
-    versionTab = new QWidget(this);  // Specify parent to ensure proper memory management
+    versionTab = new QWidget(this);
     tabWidget->addTab(versionTab, "Version");
     QVBoxLayout *versionLayout = new QVBoxLayout(versionTab);
 
-    QWidget *topContainer = new QWidget(versionTab);  // Specify parent
+    QWidget *topContainer = new QWidget(versionTab);
     QHBoxLayout *topLayout = new QHBoxLayout(topContainer);
     versionLayout->addWidget(topContainer);
 
     topLayout->addStretch();
 
-    versionImage = new QLabel(topContainer);  // Specify parent
+    versionImage = new QLabel(topContainer);
     QPixmap pixmap(":/nitrous.png");
     if (!pixmap.isNull()) {
         versionImage->setPixmap(pixmap.scaled(50, 50, Qt::KeepAspectRatio, Qt::SmoothTransformation));
@@ -31,36 +31,36 @@ AboutWindow::AboutWindow(QWidget *parent) : QDialog(parent)
     }
     topLayout->addWidget(versionImage);
 
-    versionLabel = new QLabel("Nitrous 0.5", topContainer);  // Specify parent
+    versionLabel = new QLabel("Nitrous 0.5", topContainer);
     versionLabel->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     versionLabel->setStyleSheet("font-size: 18pt; font-weight: bold; margin-left: 10px;");
     topLayout->addWidget(versionLabel);
 
     topLayout->addStretch();
 
-    QWidget *bottomContainer = new QWidget(versionTab);  // Specify parent
+    QWidget *bottomContainer = new QWidget(versionTab);
     QVBoxLayout *bottomLayout = new QVBoxLayout(bottomContainer);
     versionLayout->addWidget(bottomContainer);
 
-    aboutLabel = new QLabel("A content manager for the Stem Player\n written in C++ using Qt.", bottomContainer);  // Specify parent
+    aboutLabel = new QLabel("A content manager for the Stem Player\n written in C++ using Qt.", bottomContainer);
     aboutLabel->setAlignment(Qt::AlignCenter);
     aboutLabel->setWordWrap(true);
     bottomLayout->addWidget(aboutLabel);
 
-    copyrightLabel = new QLabel("© 2024 Katherine North", bottomContainer);  // Specify parent
+    copyrightLabel = new QLabel("© 2024 Katherine North", bottomContainer);
     copyrightLabel->setAlignment(Qt::AlignCenter);
     bottomLayout->addWidget(copyrightLabel);
 
     // Legal tab
-    legalTab = new QWidget(this);  // Specify parent to ensure proper memory management
+    legalTab = new QWidget(this);
     tabWidget->addTab(legalTab, "Legal");
     QVBoxLayout *legalLayout = new QVBoxLayout(legalTab);
 
-    legalText = new QTextEdit(legalTab);  // Specify parent
+    legalText = new QTextEdit(legalTab);
     legalText->setReadOnly(true);
     legalLayout->addWidget(legalText);
 
-    // Load MIT license text and disclaimer
+    // Load disclaimer and MIT license text
     QFile licenseFile(":/LICENSE");
     if (licenseFile.open(QFile::ReadOnly)) {
         QTextStream in(&licenseFile);

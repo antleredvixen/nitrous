@@ -3,6 +3,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDir \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QFile \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QTextStream \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
@@ -91,6 +92,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qset.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qsettings.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata_impl.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qsharedpointer.h \

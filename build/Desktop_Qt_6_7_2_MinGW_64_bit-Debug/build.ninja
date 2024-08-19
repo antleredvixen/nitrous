@@ -89,13 +89,6 @@ build CMakeFiles/nitrous.dir/src/device_connection.cpp.obj: CXX_COMPILER__nitrou
   OBJECT_DIR = CMakeFiles\nitrous.dir
   OBJECT_FILE_DIR = CMakeFiles\nitrous.dir\src
 
-build CMakeFiles/nitrous.dir/resources/icon.rc.obj: RC_COMPILER__nitrous_unscanned_Debug C$:/Users/Katie/Code/antleredvixen/nitrous/resources/icon.rc || cmake_object_order_depends_target_nitrous
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\nitrous.dir\resources\icon.rc.obj.d
-  INCLUDES = -I C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/include -I C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include -I C:/Qt/6.7.2/mingw_64/include/QtCore -I C:/Qt/6.7.2/mingw_64/include -I C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -I C:/Qt/6.7.2/mingw_64/include/QtWidgets -I C:/Qt/6.7.2/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\nitrous.dir
-  OBJECT_FILE_DIR = CMakeFiles\nitrous.dir\resources
-
 build CMakeFiles/nitrous.dir/src/current_directory.cpp.obj: CXX_COMPILER__nitrous_unscanned_Debug C$:/Users/Katie/Code/antleredvixen/nitrous/src/current_directory.cpp || cmake_object_order_depends_target_nitrous
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\nitrous.dir\src\current_directory.cpp.obj.d
@@ -128,6 +121,13 @@ build CMakeFiles/nitrous.dir/src/about_window.cpp.obj: CXX_COMPILER__nitrous_uns
   OBJECT_DIR = CMakeFiles\nitrous.dir
   OBJECT_FILE_DIR = CMakeFiles\nitrous.dir\src
 
+build CMakeFiles/nitrous.dir/resources/icon.rc.obj: RC_COMPILER__nitrous_unscanned_Debug C$:/Users/Katie/Code/antleredvixen/nitrous/resources/icon.rc || cmake_object_order_depends_target_nitrous
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\nitrous.dir\resources\icon.rc.obj.d
+  INCLUDES = -I C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/include -I C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include -I C:/Qt/6.7.2/mingw_64/include/QtCore -I C:/Qt/6.7.2/mingw_64/include -I C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -I C:/Qt/6.7.2/mingw_64/include/QtWidgets -I C:/Qt/6.7.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\nitrous.dir
+  OBJECT_FILE_DIR = CMakeFiles\nitrous.dir\resources
+
 build CMakeFiles/nitrous.dir/nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp.obj: CXX_COMPILER__nitrous_unscanned_Debug C$:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp || cmake_object_order_depends_target_nitrous
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\nitrous.dir\nitrous_autogen\3YJK5W5UP7\qrc_resources.cpp.obj.d
@@ -144,7 +144,7 @@ build CMakeFiles/nitrous.dir/nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp.obj: C
 #############################################
 # Link the executable nitrous.exe
 
-build nitrous.exe: CXX_EXECUTABLE_LINKER__nitrous_Debug CMakeFiles/nitrous.dir/nitrous_autogen/mocs_compilation.cpp.obj CMakeFiles/nitrous.dir/src/main.cpp.obj CMakeFiles/nitrous.dir/src/main_window.cpp.obj CMakeFiles/nitrous.dir/src/status_display.cpp.obj CMakeFiles/nitrous.dir/src/device_connection.cpp.obj CMakeFiles/nitrous.dir/resources/icon.rc.obj CMakeFiles/nitrous.dir/src/current_directory.cpp.obj CMakeFiles/nitrous.dir/src/content_browser.cpp.obj CMakeFiles/nitrous.dir/src/preferences.cpp.obj CMakeFiles/nitrous.dir/src/about_window.cpp.obj CMakeFiles/nitrous.dir/nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/MinGW64/static/libusb-1.0.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || nitrous_autogen nitrous_autogen_timestamp_deps
+build nitrous.exe: CXX_EXECUTABLE_LINKER__nitrous_Debug CMakeFiles/nitrous.dir/nitrous_autogen/mocs_compilation.cpp.obj CMakeFiles/nitrous.dir/src/main.cpp.obj CMakeFiles/nitrous.dir/src/main_window.cpp.obj CMakeFiles/nitrous.dir/src/status_display.cpp.obj CMakeFiles/nitrous.dir/src/device_connection.cpp.obj CMakeFiles/nitrous.dir/src/current_directory.cpp.obj CMakeFiles/nitrous.dir/src/content_browser.cpp.obj CMakeFiles/nitrous.dir/src/preferences.cpp.obj CMakeFiles/nitrous.dir/src/about_window.cpp.obj CMakeFiles/nitrous.dir/resources/icon.rc.obj CMakeFiles/nitrous.dir/nitrous_autogen/3YJK5W5UP7/qrc_resources.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/MinGW64/static/libusb-1.0.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || nitrous_autogen nitrous_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a  C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/MinGW64/static/libusb-1.0.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

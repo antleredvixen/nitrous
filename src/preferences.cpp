@@ -18,11 +18,17 @@ Preferences::Preferences(StatusDisplay* statusDisplay, QWidget *parent) : QDialo
     comboBox->addItem("Clear");
     comboBox->addItem("Black");
 
+    // Load the previously applied color index
+    QSettings settings("YourCompany", "YourApp");
+    int previousIndex = settings.value("colorIndex", 0).toInt();
+    comboBox->setCurrentIndex(previousIndex);
+
     applyButton = new QPushButton("Apply");
     okButton = new QPushButton("OK");
     cancelButton = new QPushButton("Cancel");
 
-    applyButton->setEnabled(false);
+    // Disable the Apply button if the current index matches the previous index
+    applyButton->setEnabled(comboBox->currentIndex()!= previousIndex);
 
     QHBoxLayout *layout = new QHBoxLayout;
     layout->addStretch();
@@ -54,7 +60,9 @@ Preferences::Preferences(StatusDisplay* statusDisplay, QWidget *parent) : QDialo
     connect(okButton, &QPushButton::clicked, this, &Preferences::okButtonClicked);
     connect(cancelButton, &QPushButton::clicked, this, &QDialog::reject);
     connect(comboBox, &QComboBox::currentTextChanged, this, [this]() {
-        applyButton->setEnabled(true);
+        QSettings settings("YourCompany", "YourApp");
+        int previousIndex = settings.value("colorIndex", 0).toInt();
+        applyButton->setEnabled(comboBox->currentIndex()!= previousIndex);
     });
 }
 
@@ -75,6 +83,11 @@ void Preferences::applyChanges()
         mStatusDisplay->setColorOption(StatusDisplay::ColorOption::Black);
         break;
     }
+
+    // Save the current color index
+    QSettings settings("YourCompany", "YourApp");
+    settings.setValue("colorIndex", index);
+
     applyButton->setEnabled(false);
 }
 

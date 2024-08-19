@@ -1,31 +1,32 @@
-// status_display.cpp
 #include "status_display.h"
 
 StatusDisplay::StatusDisplay(QWidget *parent) : QWidget(parent)
 {
     setFixedSize(151, 150);
-    mCurrentColorOption = ColorOption::Tan;
-    mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568);
-}
 
-void StatusDisplay::setColorOption(ColorOption option)
-{
-    mCurrentColorOption = option;
-    switch (option) {
-    case ColorOption::Tan:
+    // Load the saved color option
+    QSettings settings("YourCompany", "YourApp");
+    int colorIndex = settings.value("colorIndex", 0).toInt();
+
+    // Set the color option based on the saved index
+    switch (colorIndex) {
+    case 0:
+        mCurrentColorOption = ColorOption::Tan;
         mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568);
         break;
-    case ColorOption::Green:
+    case 1:
+        mCurrentColorOption = ColorOption::Green;
         mCurrentColors = QList<QColor>() << QColor(3107155) << QColor(2644037);
         break;
-    case ColorOption::Clear:
+    case 2:
+        mCurrentColorOption = ColorOption::Clear;
         mCurrentColors = QList<QColor>() << QColor(14737375) << QColor(14013395);
         break;
-    case ColorOption::Black:
+    case 3:
+        mCurrentColorOption = ColorOption::Black;
         mCurrentColors = QList<QColor>() << QColor(4605510) << QColor(3684408);
         break;
     }
-    update();
 }
 
 void StatusDisplay::paintEvent(QPaintEvent *event)
@@ -74,4 +75,27 @@ void StatusDisplay::paintEvent(QPaintEvent *event)
     // Draw the button
     int buttonRadius = rect().width() * 0.07;
     painter.drawEllipse(rect().center(), buttonRadius, buttonRadius);
+}
+
+void StatusDisplay::setColorOption(ColorOption option)
+{
+    mCurrentColorOption = option;
+
+    switch (option) {
+    case ColorOption::Tan:
+        mCurrentColors = QList<QColor>() << QColor(12888216) << QColor(8745568);
+        break;
+    case ColorOption::Green:
+        mCurrentColors = QList<QColor>() << QColor(3107155) << QColor(2644037);
+        break;
+    case ColorOption::Clear:
+        mCurrentColors = QList<QColor>() << QColor(14737375) << QColor(14013395);
+        break;
+    case ColorOption::Black:
+        mCurrentColors = QList<QColor>() << QColor(4605510) << QColor(3684408);
+        break;
+    }
+
+    // Update the display by calling the paintEvent function
+    update();
 }

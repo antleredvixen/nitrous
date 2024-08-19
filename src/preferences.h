@@ -7,6 +7,7 @@
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QPushButton>
+#include <QSettings>
 #include "status_display.h"
 
 class Preferences : public QDialog
