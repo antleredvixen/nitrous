@@ -1,3 +1,4 @@
+// status_display.cpp
 #include "status_display.h"
 
 StatusDisplay::StatusDisplay(QWidget *parent) : QWidget(parent)
