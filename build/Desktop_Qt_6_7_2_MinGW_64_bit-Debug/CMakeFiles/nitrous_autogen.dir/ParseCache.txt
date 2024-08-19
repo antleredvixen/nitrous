@@ -644,7 +644,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.h
-C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/current_directory.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
  mmc:Q_OBJECT
@@ -1003,6 +1002,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/statuswidget.h
+C:/Users/Katie/Code/antleredvixen/nitrous/src/stemplayerdetector.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/mainwindow.cpp

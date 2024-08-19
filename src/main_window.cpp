@@ -1,3 +1,4 @@
+// main_window.cpp
 #include "./ui_main_window.h"
 #include "main_window.h"
 #include "status_display.h"
