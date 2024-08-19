@@ -235,7 +235,8 @@
 		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsVersionlessTargets.cmake",
 		"C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeParseArguments.cmake",
-		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake",
+		"C:/Users/Katie/Code/antleredvixen/nitrous/resources/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/Katie/Code/antleredvixen/nitrous",
 	"CROSS_CONFIG" : false,

@@ -26,6 +26,8 @@ set(PROJECT_SOURCES
 
 set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/resources/icon.rc")
 
+set(resources "${CMAKE_CURRENT_SOURCE_DIR}/resources/resources.qrc")
+
 qt_add_executable(nitrous
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
@@ -42,6 +44,7 @@ qt_add_executable(nitrous
         src/preferences.cpp
         src/about_window.h
         src/about_window.cpp
+        ${resources}
 )
 
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

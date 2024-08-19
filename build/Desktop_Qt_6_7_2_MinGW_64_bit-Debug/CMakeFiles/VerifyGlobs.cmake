@@ -183,6 +183,7 @@ endif()
 # _directory_contents at C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Katie/Code/antleredvixen/nitrous/*.qrc")
 set(OLD_GLOB
+  "C:/Users/Katie/Code/antleredvixen/nitrous/resources/resources.qrc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

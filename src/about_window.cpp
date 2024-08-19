@@ -26,11 +26,15 @@ AboutWindow::AboutWindow(QWidget *parent) :
     nitrousHeading = new QLabel("Nitrous alpha_0.5");
     nitrousLayout->addWidget(nitrousHeading);
 
-    nitrousLabel = new QLabel("Nitrous is a device content manager for Kano Stem Player written in C++ using Qt.");
+    nitrousLabel = new QLabel("A content manager for the Stem Player written in C++ using Qt.");
     nitrousLayout->addWidget(nitrousLabel);
 
-    nitrousLabel = new QLabel("Copyright © 2024 Katherine North");
-    nitrousLayout->addWidget(nitrousLabel);
+    copyrightLabel = new QLabel("Copyright © 2024 Katherine North");
+    nitrousLayout->addWidget(copyrightLabel);
+
+    disclaimerLabel = new QLabel("DISCLAIMER: THIS TOOL IS AN INDEPENDENT PROJECT AND IS NOT AFFILIATED WITH, ENDORSED BY, OR ASSOCIATED WITH KANO COMPUTING OR YEEZY TECH. ALL TRADEMARKS AND PRODUCT NAMES ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.");
+    disclaimerLabel->setWordWrap(true);
+    nitrousLayout->addWidget(disclaimerLabel);
 
     // Legal tab
     legalTab = new QWidget;
@@ -43,8 +47,8 @@ AboutWindow::AboutWindow(QWidget *parent) :
     legalText->setReadOnly(true);
     legalLayout->addWidget(legalText);
 
-    // Load LGPL license text
-    QFile licenseFile(":/licenses/lgpl.txt");
+    // Load MIT license text
+    QFile licenseFile(":/LICENSE");
     if (licenseFile.open(QFile::ReadOnly)) {
         QTextStream in(&licenseFile);
         legalText->setText(in.readAll());

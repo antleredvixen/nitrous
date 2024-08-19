@@ -27,6 +27,8 @@ private:
     QLabel *nitrousImage;
     QLabel *nitrousHeading;
     QLabel *nitrousLabel;
+    QLabel *copyrightLabel;
+    QLabel *disclaimerLabel;
     QTextEdit *legalText;
 };
 
