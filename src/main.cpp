@@ -77,7 +77,10 @@ Main::Main(QWidget* parent)
     vboxLayout->addLayout(statusDisplayLayout);
 
     // Create a label to display the current directory
-    ui->statusbar->addWidget(currentDirectoryLabel);
+    QWidget *statusBarWidget = new QWidget;
+    QHBoxLayout *statusBarLayout = new QHBoxLayout(statusBarWidget);
+    statusBarLayout->addWidget(currentDirectoryLabel);
+    ui->statusbar->addWidget(statusBarWidget);
 
     connectionStatus = scan.verifyConnection();
     scan.displayConnection(connectionStatus, consoleWindow);
