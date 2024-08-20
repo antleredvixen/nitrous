@@ -29,6 +29,9 @@ Preferences::Preferences(Status *status, QWidget *parent) : QDialog(parent)
 
     // Disable the Apply button if the current index matches the previous index
     applyButton->setEnabled(comboBox->currentIndex()!= previousIndex);
+    applyButton->setFocusPolicy(Qt::NoFocus);
+    cancelButton->setFocusPolicy(Qt::NoFocus);
+    okButton->setFocusPolicy(Qt::NoFocus);
 
     QHBoxLayout *layout = new QHBoxLayout;
     layout->addStretch();

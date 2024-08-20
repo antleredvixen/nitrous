@@ -87,6 +87,7 @@ About::About(QWidget *parent) : QDialog(parent)
     // OK button
     QPushButton *okButton = new QPushButton("OK");
     okButton->setMaximumWidth(100);
+    okButton->setFocusPolicy(Qt::NoFocus);
     connect(okButton, &QPushButton::clicked, this, &QDialog::accept);
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;
