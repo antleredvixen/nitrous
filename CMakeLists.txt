@@ -9,7 +9,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets LinguistTools)
 
 set(LIBUSB_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/libusb-1.0.27/include")
 set(LIBUSB_LIBRARY "${CMAKE_CURRENT_SOURCE_DIR}/lib/libusb-1.0.27/MinGW64/static/libusb-1.0.a")
@@ -18,21 +18,22 @@ set(TS_FILES "${CMAKE_CURRENT_SOURCE_DIR}/locale/nitrous_en_US.ts")
 
 set(PROJECT_SOURCES
     src/main.cpp
-    src/main_window.cpp
-    src/main_window.h
-    src/main_window.ui
-    src/status_display.h
-    src/status_display.cpp
-    src/device_connection.h
-    src/device_connection.cpp
-    src/current_directory.h
-    src/current_directory.cpp
-    src/content_browser.h
-    src/content_browser.cpp
+    src/main.h
+    src/main.ui
+    src/status.h
+    src/status.cpp
+    src/connect.h
+    src/connect.cpp
+    src/directory.h
+    src/directory.cpp
+    src/browser.h
+    src/browser.cpp
     src/preferences.h
     src/preferences.cpp
-    src/about_window.h
-    src/about_window.cpp
+    src/about.h
+    src/about.cpp
+    src/console.h
+    src/console.cpp
     ${TS_FILES}
 )
 

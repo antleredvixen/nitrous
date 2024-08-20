@@ -1,12 +1,12 @@
 // preferences.cpp
 #include "preferences.h"
 
-Preferences::Preferences(StatusDisplay* statusDisplay, QWidget *parent) : QDialog(parent)
+Preferences::Preferences(Status *status, QWidget *parent) : QDialog(parent)
 {
-    mStatusDisplay = statusDisplay;
+    mStatus = status;
     setWindowTitle("Preferences");
 
-    label = new QLabel("Device Color: ");
+    label = new QLabel("Status Color: ");
     QFont font = label->font();
     font.setBold(true);
     label->setFont(font);
@@ -71,16 +71,16 @@ void Preferences::applyChanges()
     int index = comboBox->currentIndex();
     switch (index) {
     case 0:
-        mStatusDisplay->setColorOption(StatusDisplay::ColorOption::Tan);
+        mStatus->setColorOption(Status::ColorOption::Tan);
         break;
     case 1:
-        mStatusDisplay->setColorOption(StatusDisplay::ColorOption::Green);
+        mStatus->setColorOption(Status::ColorOption::Green);
         break;
     case 2:
-        mStatusDisplay->setColorOption(StatusDisplay::ColorOption::Clear);
+        mStatus->setColorOption(Status::ColorOption::Clear);
         break;
     case 3:
-        mStatusDisplay->setColorOption(StatusDisplay::ColorOption::Black);
+        mStatus->setColorOption(Status::ColorOption::Black);
         break;
     }
 

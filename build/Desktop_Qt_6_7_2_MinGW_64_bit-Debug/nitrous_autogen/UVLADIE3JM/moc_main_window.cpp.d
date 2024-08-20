@@ -3,6 +3,9 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDir \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QFile \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonArray \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonDocument \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QTextStream \
@@ -28,6 +31,8 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayview.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcborcommon.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -64,6 +69,10 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterator.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonarray.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsondocument.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonobject.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qlist.h \
@@ -136,6 +145,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtypes.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qversiontagging.h \
@@ -665,6 +675,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wtypesbase.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include/libusb.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/about_window.h \
+  C:/Users/Katie/Code/antleredvixen/nitrous/src/console.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/content_browser.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/device_connection.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/status_display.h

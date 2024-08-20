@@ -8,14 +8,14 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QSettings>
-#include "status_display.h"
+#include "status.h"
 
 class Preferences : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Preferences(StatusDisplay* statusDisplay, QWidget *parent = nullptr);
+    explicit Preferences(Status *status, QWidget *parent = nullptr);
 
 private slots:
     void applyChanges();
@@ -27,7 +27,7 @@ private:
     QPushButton *applyButton;
     QPushButton *okButton;
     QPushButton *cancelButton;
-    StatusDisplay *mStatusDisplay;
+    Status *mStatus;
 };
 
 #endif // PREFERENCES_H

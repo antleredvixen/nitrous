@@ -304,9 +304,6 @@ QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 //Skip Qt Creator's package manager auto-setup
 QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
 
-//The directory containing a CMake configuration file for QT.
-QT_DIR:PATH=C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6
-
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=C:/Qt/6.7.2/mingw_64/bin/qmake.exe
 
@@ -354,12 +351,6 @@ Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.7.2/mingw_64/bin/windeployqt.exe
-
-//The directory containing a CMake configuration file for libusb-1.0.27.
-libusb-1.0.27_DIR:PATH=libusb-1.0.27_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for libusb-1.0.
-libusb-1.0_DIR:PATH=libusb-1.0_DIR-NOTFOUND
 
 //Value Computed by CMake
 nitrous_BINARY_DIR:STATIC=C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug
