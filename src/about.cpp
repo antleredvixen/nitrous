@@ -84,6 +84,18 @@ About::About(QWidget *parent) : QDialog(parent)
         legalText->setText("License information not available.");
     }
 
+    // OK button
+    QPushButton *okButton = new QPushButton("OK");
+    okButton->setMaximumWidth(100);
+    connect(okButton, &QPushButton::clicked, this, &QDialog::accept);
+
+    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    buttonLayout->addStretch();
+    buttonLayout->addWidget(okButton);
+    buttonLayout->addStretch();
+
+    mainLayout->addLayout(buttonLayout);
+
     setMinimumWidth(320);
 }
 

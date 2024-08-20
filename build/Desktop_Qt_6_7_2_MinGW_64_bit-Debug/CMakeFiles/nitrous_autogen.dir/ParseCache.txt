@@ -2071,9 +2071,11 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/about.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QHBoxLayout
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTabWidget
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTextEdit
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qboxlayout.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h
@@ -2082,6 +2084,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/about.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qpushbutton.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtextedit.h

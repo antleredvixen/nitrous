@@ -11,6 +11,7 @@
 #include <QHBoxLayout>
 #include <QFile>
 #include <QTextStream>
+#include <QPushButton>
 
 class About : public QDialog
 {
