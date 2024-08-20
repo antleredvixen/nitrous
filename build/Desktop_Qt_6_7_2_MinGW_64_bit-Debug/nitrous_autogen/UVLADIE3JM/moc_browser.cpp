@@ -37,8 +37,9 @@ namespace {
 struct qt_meta_stringdata_CLASSBrowserENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSBrowserENDCLASS = QtMocHelpers::stringData(
     "Browser",
-    "backClicked",
+    "directoryChanged",
     "",
+    "directory",
     "handleItemDoubleClick",
     "QListWidgetItem*",
     "item"
@@ -62,16 +63,16 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSBrowserENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x06,    1 /* Public */,
+       1,    1,   26,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    1,   27,    2, 0x08,    2 /* Private */,
+       4,    1,   29,    2, 0x08,    3 /* Private */,
 
  // signals: parameters
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    3,
 
  // slots: parameters
-    QMetaType::Void, 0x80000000 | 4,    5,
+    QMetaType::Void, 0x80000000 | 5,    6,
 
        0        // eod
 };
@@ -85,8 +86,9 @@ Q_CONSTINIT const QMetaObject Browser::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSBrowserENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Browser, std::true_type>,
-        // method 'backClicked'
+        // method 'directoryChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'handleItemDoubleClick'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>
@@ -100,15 +102,15 @@ void Browser::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         auto *_t = static_cast<Browser *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->backClicked(); break;
+        case 0: _t->directoryChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->handleItemDoubleClick((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (Browser::*)();
-            if (_t _q_method = &Browser::backClicked; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            using _t = void (Browser::*)(const QString & );
+            if (_t _q_method = &Browser::directoryChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
@@ -147,8 +149,9 @@ int Browser::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Browser::backClicked()
+void Browser::directoryChanged(const QString & _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

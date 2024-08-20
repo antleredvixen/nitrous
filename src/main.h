@@ -9,11 +9,15 @@
 #include <QTimer>
 #include <QStorageInfo>
 #include <QLabel>
+#include <QApplication>
+#include <QLocale>
+#include <QStyleFactory>
+#include <QTranslator>
+#include <QDir>
+#include "console.h"
 #include "status.h"
 #include "connect.h"
 #include "browser.h"
-#include "about.h"
-#include "console.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -43,7 +47,6 @@ private:
     Status *deviceGraphic;
     Connect scan;
     Browser *contentBrowser;
-    About *aboutWindow;
 };
 
 #endif // MAIN_H

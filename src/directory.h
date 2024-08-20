@@ -10,6 +10,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QSettings>
+#include <QRegularExpression>
 #include "browser.h"
 
 void directory(QLabel *label, bool connectionStatus, Browser *browser);

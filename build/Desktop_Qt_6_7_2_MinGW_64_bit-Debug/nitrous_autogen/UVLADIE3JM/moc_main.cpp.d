@@ -2,14 +2,14 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDir \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QFile \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonArray \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonDocument \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonObject \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QLocale \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QTextStream \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QTranslator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
@@ -44,12 +44,18 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdatastream.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdatetime.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qdir.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qelapsedtimer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qendian.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qfile.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qfiledevice.h \
@@ -86,6 +92,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qnamespace.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qnumeric.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qobject_impl.h \
@@ -136,6 +143,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtpreprocessorsupport.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qtranslator.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtresource.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qttranslation.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qttypetraits.h \
@@ -155,7 +163,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/QColor \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.7.2/mingw_64/include/QtGui/QPen \
-  C:/Qt/6.7.2/mingw_64/include/QtGui/QPixmap \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qbrush.h \
@@ -164,8 +171,11 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/qfont.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qguiapplication.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qguiapplication_platform.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qicon.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qimage.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpainter.h \
@@ -189,13 +199,13 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QApplication \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QScrollBar \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTabWidget \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QStyleFactory \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTextEdit \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
@@ -204,8 +214,8 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qapplication.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qboxlayout.h \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
@@ -219,6 +229,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qslider.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyle.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qstylefactory.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabbar.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -676,7 +687,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wtypes.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wtypesbase.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include/libusb.h \
-  C:/Users/Katie/Code/antleredvixen/nitrous/src/about.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/browser.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/connect.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/console.h \

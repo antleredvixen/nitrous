@@ -1,17 +1,13 @@
 // main.cpp
 #include "./ui_main.h"
 #include "main.h"
+#include "console.h"
 #include "status.h"
 #include "connect.h"
+#include "browser.h"
 #include "directory.h"
 #include "preferences.h"
 #include "about.h"
-#include "browser.h"
-#include "console.h"
-#include <QApplication>
-#include <QLocale>
-#include <QStyleFactory>
-#include <QTranslator>
 
 int main(int argc, char *argv[])
 {
@@ -33,19 +29,8 @@ int main(int argc, char *argv[])
     return a.exec();
 }
 
-void Main::showPreferences()
-{
-    Preferences preferences(deviceGraphic);
-    preferences.exec();
-}
-
-void Main::showAbout() {
-    About aboutWindow;
-    aboutWindow.exec();
-}
-
-Main::Main(QWidget *parent) :
-    QMainWindow(parent),
+Main::Main(QWidget* parent)
+    : QMainWindow(parent),
     ui(new Ui::Main),
     consoleWindow(new Console(this)),
     timer(),
@@ -53,7 +38,7 @@ Main::Main(QWidget *parent) :
     currentDirectoryLabel(new QLabel),
     deviceGraphic(nullptr),
     scan(),
-    contentBrowser(new Browser(consoleWindow, currentDirectoryLabel, this)) // Pass the required parameters to the Browser constructor
+    contentBrowser(new Browser(consoleWindow, currentDirectoryLabel, this))
 {
     ui->setupUi(this);
 
@@ -92,14 +77,16 @@ Main::Main(QWidget *parent) :
     vboxLayout->addLayout(statusDisplayLayout);
 
     // Create a label to display the current directory
-    currentDirectoryLabel = new QLabel;
-
-    // Add the label to the vboxLayout
-    vboxLayout->addWidget(currentDirectoryLabel);
+    ui->statusbar->addWidget(currentDirectoryLabel);
 
     connectionStatus = scan.verifyConnection();
     scan.displayConnection(connectionStatus, consoleWindow);
-    directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+    if (connectionStatus) {
+        directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+    } else {
+        currentDirectoryLabel->setText(QDir::currentPath());
+        contentBrowser->populateList(QDir::currentPath());
+    }
 
     timer.setInterval(1000); // Check every second
     connect(&timer, &QTimer::timeout, this, &Main::deviceConnection);
@@ -111,11 +98,6 @@ Main::Main(QWidget *parent) :
 
     connect(ui->actionPreferences, &QAction::triggered, this, &Main::showPreferences);
     connect(ui->actionAbout, &QAction::triggered, this, &Main::showAbout);
-
-    // Connect the backClicked signal to the currentDirectory function
-    connect(contentBrowser, &Browser::backClicked, this, [this]() {
-        directory(currentDirectoryLabel, connectionStatus, contentBrowser);
-    });
 }
 
 void Main::deviceConnection() {
@@ -123,8 +105,24 @@ void Main::deviceConnection() {
     if (newConnectionStatus!= connectionStatus) {
         connectionStatus = newConnectionStatus;
         scan.displayConnection(connectionStatus, consoleWindow);
-        directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+        if (connectionStatus) {
+            directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+        } else {
+            currentDirectoryLabel->setText(QDir::currentPath());
+            contentBrowser->populateList(QDir::currentPath());
+        }
     }
+}
+
+void Main::showPreferences()
+{
+    Preferences preferences(deviceGraphic);
+    preferences.exec();
+}
+
+void Main::showAbout() {
+    About aboutWindow;
+    aboutWindow.exec();
 }
 
 Main::~Main()

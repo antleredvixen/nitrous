@@ -10,6 +10,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QLabel>
+#include <QSettings>
 #include "console.h"
 
 class Browser : public QWidget
@@ -19,10 +20,9 @@ class Browser : public QWidget
 public:
     Browser(Console *console, QLabel *currentDirectoryLabel, QWidget *parent = nullptr);
     void populateList(const QString &directory);
-    void populateList(const QStringList &albumTitles);
 
 signals:
-    void backClicked();
+    void directoryChanged(const QString &directory);
 
 private slots:
     void handleItemDoubleClick(QListWidgetItem *item);

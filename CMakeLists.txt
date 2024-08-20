@@ -36,7 +36,6 @@ set(PROJECT_SOURCES
     src/console.cpp
     ${TS_FILES}
 )
-
 set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/resources/icon.rc")
 
 set(resources "${CMAKE_CURRENT_SOURCE_DIR}/resources/resources.qrc")
