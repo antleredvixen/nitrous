@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(nitrous VERSION 0.7 LANGUAGES CXX)
+project(nitrous VERSION 0.8 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)

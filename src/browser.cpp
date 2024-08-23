@@ -7,7 +7,12 @@ Browser::Browser(Console *console, QLabel *currentDirectoryLabel, QWidget *paren
     this->currentDirectoryLabel = currentDirectoryLabel;
 
     listWidget = new QListWidget(this);
+
+    // Create a label to display "Browser"
+    QLabel *browserLabel = new QLabel("<b>Browser</b>", this);
+
     QVBoxLayout *layout = new QVBoxLayout;
+    layout->addWidget(browserLabel); // Add the label to the layout
     layout->addWidget(listWidget);
     setLayout(layout);
 

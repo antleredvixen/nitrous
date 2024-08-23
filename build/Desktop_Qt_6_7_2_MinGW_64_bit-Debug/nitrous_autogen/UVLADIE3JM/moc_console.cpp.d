@@ -44,6 +44,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qglobalstatic.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qhash.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qhashfunctions.h \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/qiodevice.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterator.h \
@@ -132,6 +133,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qpolygon.h \
@@ -148,11 +150,19 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QScrollBar \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTextEdit \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractslider.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qboxlayout.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qscrollbar.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtextedit.h \

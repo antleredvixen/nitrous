@@ -66,13 +66,28 @@ Main::Main(QWidget* parent)
     // Create a horizontal layout for the status display and console window
     QHBoxLayout *statusDisplayLayout = new QHBoxLayout;
 
-    // Add the device graphic to the statusDisplayLayout
-    statusDisplayLayout->addWidget(deviceGraphic);
+    // Create a vertical layout for the device graphic and status label
+    QVBoxLayout *deviceStatusLayout = new QVBoxLayout;
+    deviceStatusLayout->addWidget(deviceGraphic);
+
+    // Create a label to display "Status: connection"
+    statusLabel = new QLabel("<b>Status: <font color='red'>Disconnected</font></b>");
+    statusLabel->setTextFormat(Qt::RichText);
+    deviceStatusLayout->addWidget(statusLabel);
+    deviceStatusLayout->setAlignment(statusLabel, Qt::AlignHCenter);
+
+    // Add the device graphic and status label to the deviceLayout
+    QVBoxLayout *deviceLayout = new QVBoxLayout;
+    deviceLayout->addStretch();
+    deviceLayout->addLayout(deviceStatusLayout);
+    deviceLayout->addStretch();
+
+    statusDisplayLayout->addLayout(deviceLayout);
 
     // Create a vertical layout for the console window
     QVBoxLayout *consoleLayout = new QVBoxLayout;
     consoleLayout->addStretch();
-    consoleWindow->setFixedHeight(deviceGraphic->height() / 2); // Set the console height to half the height of the status
+    consoleWindow->setFixedHeight(deviceGraphic->height());
     consoleLayout->addWidget(consoleWindow);
 
     // Add the console layout to the statusDisplayLayout
@@ -81,19 +96,25 @@ Main::Main(QWidget* parent)
     // Add the statusDisplayLayout to the vboxLayout
     vboxLayout->addLayout(statusDisplayLayout);
 
-    // Create a label to display the current directory
+    // Create a label to display "Current Directory: "
+    QLabel *directoryPrefixLabel = new QLabel("<b>Current Directory: </b>");
+
+    // Create a widget to display the current directory
     QWidget *statusBarWidget = new QWidget;
     QHBoxLayout *statusBarLayout = new QHBoxLayout(statusBarWidget);
+    statusBarLayout->addWidget(directoryPrefixLabel);
     statusBarLayout->addWidget(currentDirectoryLabel);
     ui->statusbar->addWidget(statusBarWidget);
 
     connectionStatus = scan.verifyConnection();
-    scan.displayConnection(connectionStatus, consoleWindow);
+    scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
     if (connectionStatus) {
         directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+        statusLabel->setText("<b>Status: <font color='lime'>Connected</font></b>");
     } else {
         currentDirectoryLabel->setText(QDir::currentPath());
         contentBrowser->populateList(QDir::currentPath());
+        statusLabel->setText("<b>Status: <font color='red'>Disconnected</font></b>");
     }
 
     timer.setInterval(1000); // Check every second
@@ -110,14 +131,16 @@ Main::Main(QWidget* parent)
 
 void Main::deviceConnection() {
     bool newConnectionStatus = scan.verifyConnection();
-    if (newConnectionStatus!= connectionStatus) {
+    if (newConnectionStatus != connectionStatus) {
         connectionStatus = newConnectionStatus;
-        scan.displayConnection(connectionStatus, consoleWindow);
+        scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
         if (connectionStatus) {
             directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+            statusLabel->setText("<b>Status: <font color='lime'>Connected</font></b>");
         } else {
             currentDirectoryLabel->setText(QDir::currentPath());
             contentBrowser->populateList(QDir::currentPath());
+            statusLabel->setText("<b>Status: <font color='red'>Disconnected</font></b>");
         }
     }
 }

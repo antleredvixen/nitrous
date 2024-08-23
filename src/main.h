@@ -49,6 +49,7 @@ private:
     Connect scan;
     Browser *contentBrowser;
     Config *configForm;
+    QLabel *statusLabel; // Add this line
 };
 
 #endif // MAIN_H

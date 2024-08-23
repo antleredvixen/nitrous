@@ -1,19 +1,28 @@
 // console.cpp
 #include "console.h"
 
-Console::Console(QWidget *parent) : QTextEdit(parent)
+Console::Console(QWidget *parent) : QWidget(parent)
 {
-    setReadOnly(true);
-    setFixedHeight(150); // adjust the height as needed
+    consoleTextEdit = new QTextEdit(this);
+    consoleTextEdit->setReadOnly(true);
+    consoleTextEdit->setFixedHeight(150); // adjust the height as needed
+
+    QLabel *consoleLabel = new QLabel("<b>Console</b>", this);
+
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->addWidget(consoleLabel);
+    layout->addWidget(consoleTextEdit);
+
+    setLayout(layout);
 }
 
 void Console::appendText(const QString &text)
 {
-    append(text);
-    verticalScrollBar()->setValue(verticalScrollBar()->maximum()); // Always scroll to the bottom
+    consoleTextEdit->append(text);
+    consoleTextEdit->verticalScrollBar()->setValue(consoleTextEdit->verticalScrollBar()->maximum()); // Always scroll to the bottom
 }
 
 bool Console::isScrollBarAtBottom() const
 {
-    return verticalScrollBar()->value() == verticalScrollBar()->maximum();
+    return consoleTextEdit->verticalScrollBar()->value() == consoleTextEdit->verticalScrollBar()->maximum();
 }

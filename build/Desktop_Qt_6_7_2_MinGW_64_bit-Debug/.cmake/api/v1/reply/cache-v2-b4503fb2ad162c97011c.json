@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "0.1"
+			"value" : "0.8"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION_MAJOR",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "1"
+			"value" : "8"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION_PATCH",

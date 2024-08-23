@@ -69,7 +69,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSConsoleENDCLASS[] = {
 };
 
 Q_CONSTINIT const QMetaObject Console::staticMetaObject = { {
-    QMetaObject::SuperData::link<QTextEdit::staticMetaObject>(),
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
     qt_meta_stringdata_CLASSConsoleENDCLASS.offsetsAndSizes,
     qt_meta_data_CLASSConsoleENDCLASS,
     qt_static_metacall,
@@ -106,12 +106,12 @@ void *Console::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_CLASSConsoleENDCLASS.stringdata0))
         return static_cast<void*>(this);
-    return QTextEdit::qt_metacast(_clname);
+    return QWidget::qt_metacast(_clname);
 }
 
 int Console::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QTextEdit::qt_metacall(_c, _id, _a);
+    _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
