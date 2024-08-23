@@ -15,10 +15,10 @@ class Status : public QWidget
 
 public:
     explicit Status(QWidget *parent = nullptr);
-
     enum class ColorOption { Tan, Green, Clear, Black };
-
     void setColorOption(ColorOption option);
+
+    static QList<QColor> getColorsForOption(ColorOption option);
 
 protected:
     void paintEvent(QPaintEvent *event) override;

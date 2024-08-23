@@ -5,12 +5,10 @@ Preferences::Preferences(Status *status, QWidget *parent) : QDialog(parent)
 {
     mStatus = status;
     setWindowTitle("Preferences");
-
     label = new QLabel("Status Color: ");
     QFont font = label->font();
     font.setBold(true);
     label->setFont(font);
-
     comboBox = new QComboBox;
     comboBox->setFixedWidth(100);
     comboBox->addItem("Tan");
@@ -18,17 +16,17 @@ Preferences::Preferences(Status *status, QWidget *parent) : QDialog(parent)
     comboBox->addItem("Clear");
     comboBox->addItem("Black");
 
-    // Load the previously applied color index
-    QSettings settings("YourCompany", "YourApp");
-    int previousIndex = settings.value("colorIndex", 0).toInt();
-    comboBox->setCurrentIndex(previousIndex);
+    // Load the previously applied color option
+    QSettings settings("antleredvixen", "Nitrous");
+    int previousOption = settings.value("colorOption", 0).toInt();
+    comboBox->setCurrentIndex(previousOption);
 
     applyButton = new QPushButton("Apply");
     okButton = new QPushButton("OK");
     cancelButton = new QPushButton("Cancel");
 
-    // Disable the Apply button if the current index matches the previous index
-    applyButton->setEnabled(comboBox->currentIndex()!= previousIndex);
+    // Disable the Apply button if the current index matches the previous option
+    applyButton->setEnabled(comboBox->currentIndex() != previousOption);
     applyButton->setFocusPolicy(Qt::NoFocus);
     cancelButton->setFocusPolicy(Qt::NoFocus);
     okButton->setFocusPolicy(Qt::NoFocus);
@@ -63,33 +61,19 @@ Preferences::Preferences(Status *status, QWidget *parent) : QDialog(parent)
     connect(okButton, &QPushButton::clicked, this, &Preferences::okButtonClicked);
     connect(cancelButton, &QPushButton::clicked, this, &QDialog::reject);
     connect(comboBox, &QComboBox::currentTextChanged, this, [this]() {
-        QSettings settings("YourCompany", "YourApp");
-        int previousIndex = settings.value("colorIndex", 0).toInt();
-        applyButton->setEnabled(comboBox->currentIndex()!= previousIndex);
+        QSettings settings("antleredvixen", "Nitrous");
+        int previousOption = settings.value("colorOption", 0).toInt();
+        applyButton->setEnabled(comboBox->currentIndex() != previousOption);
     });
 }
 
 void Preferences::applyChanges()
 {
     int index = comboBox->currentIndex();
-    switch (index) {
-    case 0:
-        mStatus->setColorOption(Status::ColorOption::Tan);
-        break;
-    case 1:
-        mStatus->setColorOption(Status::ColorOption::Green);
-        break;
-    case 2:
-        mStatus->setColorOption(Status::ColorOption::Clear);
-        break;
-    case 3:
-        mStatus->setColorOption(Status::ColorOption::Black);
-        break;
-    }
+    Status::ColorOption option = static_cast<Status::ColorOption>(index);
+    mStatus->setColorOption(option);
 
-    // Save the current color index
-    QSettings settings("YourCompany", "YourApp");
-    settings.setValue("colorIndex", index);
+    // The setColorOption method now handles saving the setting
 
     applyButton->setEnabled(false);
 }
