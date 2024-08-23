@@ -20,7 +20,24 @@ void Browser::populateList(const QString &directory)
     QDir dir(directory);
     dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
     listWidget->clear();
-    foreach (const QFileInfo &file, dir.entryInfoList()) {
+    QFileInfoList fileInfoList = dir.entryInfoList();
+    // Custom sorting function to prioritize numerical order
+    static QRegularExpression regExp("([A-Za-z]+)(\\d+)");
+    std::sort(fileInfoList.begin(), fileInfoList.end(), [](const QFileInfo &a, const QFileInfo &b) {
+        QString aName = a.fileName();
+        QString bName = b.fileName();
+        QRegularExpressionMatch matchA = regExp.match(aName);
+        QRegularExpressionMatch matchB = regExp.match(bName);
+        if (matchA.hasMatch() && matchB.hasMatch()) {
+            int aNumber = matchA.captured(2).toInt();
+            int bNumber = matchB.captured(2).toInt();
+            if (aName.startsWith(matchA.captured(1)) && bName.startsWith(matchB.captured(1))) {
+                return aNumber < bNumber;
+            }
+        }
+        return QString::localeAwareCompare(aName, bName) < 0;
+    });
+    foreach (const QFileInfo &file, fileInfoList) {
         listWidget->addItem(file.fileName());
     }
 
@@ -32,6 +49,7 @@ void Browser::populateList(const QString &directory)
 
     currentDirectoryLabel->setText(directory); // Remove the extra slash
 }
+
 void Browser::handleItemDoubleClick(QListWidgetItem *item) {
     QString itemName = item->text();
     QString currentDirectory = currentDirectoryLabel->text();

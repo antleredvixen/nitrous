@@ -7,6 +7,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonDocument \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QLocale \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QRegularExpression \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QString \

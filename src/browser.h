@@ -11,6 +11,7 @@
 #include <QJsonArray>
 #include <QLabel>
 #include <QSettings>
+#include <QRegularExpression>
 #include "console.h"
 
 class Browser : public QWidget
