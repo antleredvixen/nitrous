@@ -6,7 +6,7 @@ Status::Status(QWidget *parent) : QWidget(parent)
     setFixedSize(151, 150);
 
     // Load the saved color option
-    QSettings settings("YourCompany", "YourApp");
+    QSettings settings("antleredvixen", "Nitrous");
     int colorIndex = settings.value("colorIndex", 0).toInt();
 
     // Set the color option based on the saved index

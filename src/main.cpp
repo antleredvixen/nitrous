@@ -8,6 +8,7 @@
 #include "directory.h"
 #include "preferences.h"
 #include "about.h"
+#include "config.h"
 
 int main(int argc, char *argv[])
 {
@@ -38,7 +39,8 @@ Main::Main(QWidget* parent)
     currentDirectoryLabel(new QLabel),
     deviceGraphic(nullptr),
     scan(),
-    contentBrowser(new Browser(consoleWindow, currentDirectoryLabel, this))
+    contentBrowser(new Browser(consoleWindow, currentDirectoryLabel, this)),
+    configForm(new Config(this))
 {
     ui->setupUi(this);
 
@@ -48,15 +50,18 @@ Main::Main(QWidget* parent)
     // Create a vertical layout for the central widget
     QVBoxLayout *vboxLayout = new QVBoxLayout(ui->centralwidget);
 
-    // Create a vertical layout for the contentBrowser
-    QVBoxLayout *contentBrowserLayout = new QVBoxLayout;
+    // Create a horizontal layout for the contentBrowser and configForm
+    QHBoxLayout *contentLayout = new QHBoxLayout;
     contentBrowser->setMinimumSize(150, 150);
     contentBrowser->setMaximumWidth(deviceGraphic->width());
     contentBrowser->setMinimumWidth(deviceGraphic->width());
-    contentBrowserLayout->addWidget(contentBrowser);
+    contentLayout->addWidget(contentBrowser);
 
-    // Add the contentBrowser layout to the vboxLayout
-    vboxLayout->addLayout(contentBrowserLayout);
+    // Add the configForm to the contentLayout
+    contentLayout->addWidget(configForm);
+
+    // Add the contentLayout to the vboxLayout
+    vboxLayout->addLayout(contentLayout);
 
     // Create a horizontal layout for the status display and console window
     QHBoxLayout *statusDisplayLayout = new QHBoxLayout;

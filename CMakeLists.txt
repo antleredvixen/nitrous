@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(nitrous VERSION 0.1 LANGUAGES CXX)
+project(nitrous VERSION 0.7 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -45,6 +45,9 @@ qt_add_executable(nitrous
     ${PROJECT_SOURCES}
     ${app_icon_resource_windows}
     ${resources}
+    src/config.h src/config.cpp
+    src/config_data.h
+    src/config_file_handler.h src/config_file_handler.cpp
 )
 
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

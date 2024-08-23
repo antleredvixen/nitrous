@@ -31,7 +31,7 @@ About::About(QWidget *parent) : QDialog(parent)
     }
     topLayout->addWidget(versionImage);
 
-    versionLabel = new QLabel("Nitrous 0.6", topContainer);  // Specify parent
+    versionLabel = new QLabel("Nitrous 0.7", topContainer);  // Specify parent
     versionLabel->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     versionLabel->setStyleSheet("font-size: 18pt; font-weight: bold; margin-left: 10px;");
     topLayout->addWidget(versionLabel);

@@ -23,10 +23,15 @@ void Browser::populateList(const QString &directory)
     foreach (const QFileInfo &file, dir.entryInfoList()) {
         listWidget->addItem(file.fileName());
     }
-    listWidget->insertItem(0, ".."); // Add a ".." item to navigate up
+
+    // Check if the current directory is the root directory
+    QString rootPath = dir.absolutePath();
+    if (rootPath.length() > 3) {
+        listWidget->insertItem(0, ".."); // Add a ".." item to navigate up
+    }
+
     currentDirectoryLabel->setText(directory); // Remove the extra slash
 }
-
 void Browser::handleItemDoubleClick(QListWidgetItem *item) {
     QString itemName = item->text();
     QString currentDirectory = currentDirectoryLabel->text();

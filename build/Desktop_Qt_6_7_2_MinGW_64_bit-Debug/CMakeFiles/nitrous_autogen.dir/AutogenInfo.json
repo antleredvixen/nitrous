@@ -249,6 +249,24 @@
 			null
 		],
 		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h",
+			"MU",
+			"UVLADIE3JM/moc_config.cpp",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h",
+			"MU",
+			"UVLADIE3JM/moc_config_data.cpp",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_file_handler.h",
+			"MU",
+			"UVLADIE3JM/moc_config_file_handler.cpp",
+			null
+		],
+		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/src/connect.h",
 			"MU",
 			"UVLADIE3JM/moc_connect.cpp",
@@ -360,6 +378,16 @@
 		[ "C:/Users/Katie/Code/antleredvixen/nitrous/src/about.cpp", "MU", null ],
 		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/src/browser.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_file_handler.cpp",
 			"MU",
 			null
 		],

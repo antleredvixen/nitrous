@@ -18,6 +18,7 @@
 #include "status.h"
 #include "connect.h"
 #include "browser.h"
+#include "config.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -47,6 +48,7 @@ private:
     Status *deviceGraphic;
     Connect scan;
     Browser *contentBrowser;
+    Config *configForm;
 };
 
 #endif // MAIN_H
