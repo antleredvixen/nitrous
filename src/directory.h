@@ -12,8 +12,9 @@
 #include <QSettings>
 #include <QRegularExpression>
 #include "browser.h"
+#include "config.h"
 
-void directory(QLabel *label, bool connectionStatus, Browser *browser);
+void directory(QLabel *label, bool connectionStatus, Browser *browser, Config *config);
 QString getCurrentDirectoryLocation();
 void openFolder(QLabel *label, QMainWindow *mainWindow, Browser *browser);
 

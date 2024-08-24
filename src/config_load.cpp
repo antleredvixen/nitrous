@@ -4,14 +4,22 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QDir>
 
 bool ConfigLoad::loadConfig(ConfigData& config) {
-    QFile configFile("CONFIG.TXT");
+    // Get the current directory
+    QString currentDir = QDir::currentPath();
+
+    // Construct the path to CONFIG.TXT in the current directory
+    QString configFilePath = currentDir + "/CONFIG.TXT";
+
+    QFile configFile(configFilePath);
     if (configFile.open(QFile::ReadOnly)) {
         QJsonDocument jsonDoc = QJsonDocument::fromJson(configFile.readAll());
         QJsonObject jsonObject = jsonDoc.object();
 
         config.name = jsonObject["name"].toString();
+
         QJsonObject parameters = jsonObject["parameters"].toObject();
         config.seekJumpPeriod = parameters["SeekJumpPeriod_mSecs"].toInt();
         config.seekBuffersToPlay = parameters["SeekBuffersToPlay"].toInt();

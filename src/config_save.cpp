@@ -4,8 +4,15 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QDir>
 
 bool ConfigSave::saveConfig(const ConfigData& config) {
+    // Get the current directory
+    QString currentDir = QDir::currentPath();
+
+    // Construct the path to CONFIG.TXT in the current directory
+    QString configFilePath = currentDir + "/CONFIG.TXT";
+
     QJsonObject jsonObject;
     jsonObject["name"] = config.name;
 
@@ -23,7 +30,8 @@ bool ConfigSave::saveConfig(const ConfigData& config) {
     jsonObject["parameters"] = parameters;
 
     QJsonDocument jsonDoc(jsonObject);
-    QFile configFile("CONFIG.TXT");
+
+    QFile configFile(configFilePath);
     if (configFile.open(QFile::WriteOnly)) {
         configFile.write(jsonDoc.toJson(QJsonDocument::Indented));
         configFile.close();

@@ -50,6 +50,7 @@ private:
     Browser *contentBrowser;
     Config *configForm;
     QLabel *statusLabel; // Add this line
+    QString defaultDirectory;
 };
 
 #endif // MAIN_H

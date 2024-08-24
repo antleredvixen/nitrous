@@ -44,6 +44,8 @@ Main::Main(QWidget* parent)
 {
     ui->setupUi(this);
 
+    defaultDirectory = QDir::currentPath();
+
     // Create the device graphic
     deviceGraphic = new Status(this);
 
@@ -109,11 +111,12 @@ Main::Main(QWidget* parent)
     connectionStatus = scan.verifyConnection();
     scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
     if (connectionStatus) {
-        directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+        directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm);
         statusLabel->setText("<b>Status: <font color='lime'>Connected</font></b>");
     } else {
         currentDirectoryLabel->setText(QDir::currentPath());
         contentBrowser->populateList(QDir::currentPath());
+        configForm->updateCurrentDirectory(QDir::currentPath());
         statusLabel->setText("<b>Status: <font color='red'>Disconnected</font></b>");
     }
 
@@ -123,6 +126,9 @@ Main::Main(QWidget* parent)
 
     connect(ui->actionOpen, &QAction::triggered, this, [this]() {
         openFolder(currentDirectoryLabel, this, contentBrowser);
+        QString newPath = currentDirectoryLabel->text();
+        configForm->updateCurrentDirectory(newPath);
+        configForm->setVisible(QFile::exists(newPath + "/CONFIG.TXT"));
     });
 
     connect(ui->actionPreferences, &QAction::triggered, this, &Main::showPreferences);
@@ -135,11 +141,12 @@ void Main::deviceConnection() {
         connectionStatus = newConnectionStatus;
         scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
         if (connectionStatus) {
-            directory(currentDirectoryLabel, connectionStatus, contentBrowser);
+            directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm);
             statusLabel->setText("<b>Status: <font color='lime'>Connected</font></b>");
         } else {
-            currentDirectoryLabel->setText(QDir::currentPath());
-            contentBrowser->populateList(QDir::currentPath());
+            currentDirectoryLabel->setText(defaultDirectory);
+            contentBrowser->populateList(defaultDirectory);
+            configForm->updateCurrentDirectory(defaultDirectory);
             statusLabel->setText("<b>Status: <font color='red'>Disconnected</font></b>");
         }
     }

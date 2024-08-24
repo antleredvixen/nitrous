@@ -19,14 +19,25 @@
 
 class Config : public QWidget {
     Q_OBJECT
-
 public:
     explicit Config(QWidget *parent = nullptr);
     ~Config();
-
     void loadConfig();
     void saveConfig();
+    void updateCurrentDirectory(const QString &path);
 
+    QLineEdit* getNameLineEdit() { return this->nameLineEdit; }
+    QSpinBox* getSeekJumpPeriodSpinBox() { return this->seekJumpPeriodSpinBox; }
+    QSpinBox* getSeekBuffersToPlaySpinBox() { return this->seekBuffersToPlaySpinBox; }
+    QSpinBox* getIsolationRampPeriodSpinBox() { return this->isolationRampPeriodSpinBox; }
+    QSpinBox* getIsolationHitBoxSizeSpinBox() { return this->isolationHitBoxSizeSpinBox; }
+    QSpinBox* getMinStemBackgroundLevelSpinBox() { return this->minStemBackgroundLevelSpinBox; }
+    QDoubleSpinBox* getFast2playDoubleSpinBox() { return this->fast2playDoubleSpinBox; }
+    QDoubleSpinBox* getFast1playDoubleSpinBox() { return this->fast1playDoubleSpinBox; }
+    QDoubleSpinBox* getSlow1playDoubleSpinBox() { return this->slow1playDoubleSpinBox; }
+    QSpinBox* getRecordPeriodSpinBox() { return this->recordPeriodSpinBox; }
+
+    void setVisible(bool visible);
     void setNameLineEdit(QLineEdit* nameLineEdit) { this->nameLineEdit = nameLineEdit; }
     void setSeekJumpPeriodSpinBox(QSpinBox* seekJumpPeriodSpinBox) { this->seekJumpPeriodSpinBox = seekJumpPeriodSpinBox; }
     void setSeekBuffersToPlaySpinBox(QSpinBox* seekBuffersToPlaySpinBox) { this->seekBuffersToPlaySpinBox = seekBuffersToPlaySpinBox; }
