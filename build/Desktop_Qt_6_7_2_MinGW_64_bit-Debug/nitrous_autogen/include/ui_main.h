@@ -49,6 +49,7 @@ public:
         actionOpen->setObjectName("actionOpen");
         actionExport_PRODDATA_DAT = new QAction(Main);
         actionExport_PRODDATA_DAT->setObjectName("actionExport_PRODDATA_DAT");
+        actionExport_PRODDATA_DAT->setEnabled(false);
         centralwidget = new QWidget(Main);
         centralwidget->setObjectName("centralwidget");
         Main->setCentralWidget(centralwidget);

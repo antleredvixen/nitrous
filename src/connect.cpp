@@ -5,9 +5,9 @@ void Connect::displayConnection(bool &connectionStatus, QTextEdit* consoleWindow
 {
     QString timestamp = QDateTime::currentDateTime().toString("[yyyy-MM-dd HH:mm:ss] ");
     if (connectionStatus == true) {
-        consoleWindow->append(timestamp + "<font color='lime'>Device connected!</font>");
+        consoleWindow->append(timestamp + "Device connected.");
     } else {
-        consoleWindow->append(timestamp + "<font color='red'>Device disconnected.</font>");
+        consoleWindow->append(timestamp + "Device disconnected.");
     }
 }
 

@@ -70,6 +70,9 @@
    </property>
   </action>
   <action name="actionExport_PRODDATA_DAT">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Export PRODDATA.DAT</string>
    </property>

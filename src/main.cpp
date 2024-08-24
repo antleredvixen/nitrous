@@ -87,7 +87,6 @@ Main::Main(QWidget* parent)
 
     // Create a vertical layout for the console window
     QVBoxLayout *consoleLayout = new QVBoxLayout;
-    consoleLayout->addStretch();
     consoleWindow->setFixedHeight(deviceGraphic->height());
     consoleLayout->addWidget(consoleWindow);
 
@@ -111,12 +110,12 @@ Main::Main(QWidget* parent)
     scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
     if (connectionStatus) {
         directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm);
-        statusLabel->setText("<b>Status: <font color='lime'>Connected</font></b>");
+        statusLabel->setText("<b>Status: </b><font color='lime'>Connected</font>");
     } else {
         currentDirectoryLabel->setText(QDir::currentPath());
         contentBrowser->populateList(QDir::currentPath());
         configForm->updateCurrentDirectory(QDir::currentPath());
-        statusLabel->setText("<b>Status: <font color='red'>Disconnected</font></b>");
+        statusLabel->setText("<b>Status: </b><font color='red'>Disconnected</font>");
     }
 
     timer.setInterval(1000); // Check every second
@@ -140,12 +139,12 @@ void Main::deviceConnection() {
         scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
         if (connectionStatus) {
             directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm);
-            statusLabel->setText("<b>Status: <font color='lime'>Connected</font></b>");
+            statusLabel->setText("<b>Status: </b><font color='lime'>Connected</font>");
         } else {
             currentDirectoryLabel->setText(defaultDirectory);
             contentBrowser->populateList(defaultDirectory);
             configForm->updateCurrentDirectory(defaultDirectory);
-            statusLabel->setText("<b>Status: <font color='red'>Disconnected</font></b>");
+            statusLabel->setText("<b>Status: </b><font color='red'>Disconnected</font>");
         }
     }
 }
