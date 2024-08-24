@@ -27,11 +27,18 @@ public:
     void loadConfig();
     void saveConfig();
 
-private:
-    void setupUI();
-    void updateUIFromConfig();
-    void updateConfigFromUI();
+    void setNameLineEdit(QLineEdit* nameLineEdit) { this->nameLineEdit = nameLineEdit; }
+    void setSeekJumpPeriodSpinBox(QSpinBox* seekJumpPeriodSpinBox) { this->seekJumpPeriodSpinBox = seekJumpPeriodSpinBox; }
+    void setSeekBuffersToPlaySpinBox(QSpinBox* seekBuffersToPlaySpinBox) { this->seekBuffersToPlaySpinBox = seekBuffersToPlaySpinBox; }
+    void setIsolationRampPeriodSpinBox(QSpinBox* isolationRampPeriodSpinBox) { this->isolationRampPeriodSpinBox = isolationRampPeriodSpinBox; }
+    void setIsolationHitBoxSizeSpinBox(QSpinBox* isolationHitBoxSizeSpinBox) { this->isolationHitBoxSizeSpinBox = isolationHitBoxSizeSpinBox; }
+    void setMinStemBackgroundLevelSpinBox(QSpinBox* minStemBackgroundLevelSpinBox) { this->minStemBackgroundLevelSpinBox = minStemBackgroundLevelSpinBox; }
+    void setFast2playDoubleSpinBox(QDoubleSpinBox* fast2playDoubleSpinBox) { this->fast2playDoubleSpinBox = fast2playDoubleSpinBox; }
+    void setFast1playDoubleSpinBox(QDoubleSpinBox* fast1playDoubleSpinBox) { this->fast1playDoubleSpinBox = fast1playDoubleSpinBox; }
+    void setSlow1playDoubleSpinBox(QDoubleSpinBox* slow1playDoubleSpinBox) { this->slow1playDoubleSpinBox = slow1playDoubleSpinBox; }
+    void setRecordPeriodSpinBox(QSpinBox* recordPeriodSpinBox) { this->recordPeriodSpinBox = recordPeriodSpinBox; }
 
+private:
     ConfigData m_configData;
     QHBoxLayout* mainLayout;
     QLineEdit* nameLineEdit;

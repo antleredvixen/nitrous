@@ -1,0 +1,14 @@
+{
+    "name": "",
+    "parameters": {
+        "Fast1play": 0,
+        "Fast2play": 0,
+        "IsolationHitBoxSize": 0,
+        "IsolationRampPeriod_mSecs": 0,
+        "MinStemBackgroundLevel": 0,
+        "RecordPeriod_secs": 0,
+        "SeekBuffersToPlay": 0,
+        "SeekJumpPeriod_mSecs": 0,
+        "Slow1play": 0
+    }
+}

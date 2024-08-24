@@ -47,7 +47,11 @@ qt_add_executable(nitrous
     ${resources}
     src/config.h src/config.cpp
     src/config_data.h
-    src/config_file_handler.h src/config_file_handler.cpp
+
+    src/config_load.h src/config_load.cpp
+    src/config_save.h src/config_save.cpp
+    src/config_setup_ui.h src/config_setup_ui.cpp
+    src/config_update.h src/config_update.cpp
 )
 
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

@@ -261,9 +261,27 @@
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_file_handler.h",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_load.h",
 			"MU",
-			"UVLADIE3JM/moc_config_file_handler.cpp",
+			"UVLADIE3JM/moc_config_load.cpp",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_save.h",
+			"MU",
+			"UVLADIE3JM/moc_config_save.cpp",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_setup_ui.h",
+			"MU",
+			"UVLADIE3JM/moc_config_setup_ui.cpp",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_update.h",
+			"MU",
+			"UVLADIE3JM/moc_config_update.cpp",
 			null
 		],
 		[
@@ -387,7 +405,22 @@
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_file_handler.cpp",
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_load.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_save.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_setup_ui.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_update.cpp",
 			"MU",
 			null
 		],

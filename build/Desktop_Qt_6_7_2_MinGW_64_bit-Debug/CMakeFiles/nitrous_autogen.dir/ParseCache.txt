@@ -2696,6 +2696,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/console.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/directory.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/main.cpp
  uic:./ui_main.h
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_setup_ui.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/preferences.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/status.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h
@@ -3126,5 +3127,12 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_setup_ui.cpp
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_save.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config_file_handler.h
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_save.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config_file_handler.cpp
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_update.cpp
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_load.h
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_load.cpp
+C:/Users/Katie/Code/antleredvixen/nitrous/src/config_update.h
