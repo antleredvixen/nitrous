@@ -3,65 +3,73 @@
 #define CONFIG_H
 
 #include <QWidget>
-#include <QVBoxLayout>
 #include <QHBoxLayout>
-#include <QLabel>
 #include <QLineEdit>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QFile>
-#include <QTextStream>
-#include <QFont>
 #include <QSpinBox>
 #include <QDoubleSpinBox>
-#include "config_data.h"
+#include <QPushButton>
+#include <QLabel>
 
-class Config : public QWidget {
+class Config : public QWidget
+{
     Q_OBJECT
+
 public:
-    explicit Config(QWidget *parent = nullptr);
+    Config(QWidget *parent = nullptr);
     ~Config();
-    void loadConfig();
-    void saveConfig();
+
+    QLineEdit *getNameLineEdit();
+    void setNameLineEdit(QLineEdit *lineEdit);
+
+    QSpinBox *getSeekJumpPeriodSpinBox();
+    void setSeekJumpPeriodSpinBox(QSpinBox *spinBox);
+
+    QSpinBox *getSeekBuffersToPlaySpinBox();
+    void setSeekBuffersToPlaySpinBox(QSpinBox *spinBox);
+
+    QSpinBox *getIsolationRampPeriodSpinBox();
+    void setIsolationRampPeriodSpinBox(QSpinBox *spinBox);
+
+    QSpinBox *getIsolationHitBoxSizeSpinBox();
+    void setIsolationHitBoxSizeSpinBox(QSpinBox *spinBox);
+
+    QSpinBox *getMinStemBackgroundLevelSpinBox();
+    void setMinStemBackgroundLevelSpinBox(QSpinBox *spinBox);
+
+    QDoubleSpinBox *getFast2playDoubleSpinBox();
+    void setFast2playDoubleSpinBox(QDoubleSpinBox *spinBox);
+
+    QDoubleSpinBox *getFast1playDoubleSpinBox();
+    void setFast1playDoubleSpinBox(QDoubleSpinBox *spinBox);
+
+    QDoubleSpinBox *getSlow1playDoubleSpinBox();
+    void setSlow1playDoubleSpinBox(QDoubleSpinBox *spinBox);
+
+    QSpinBox *getRecordPeriodSpinBox();
+    void setRecordPeriodSpinBox(QSpinBox *spinBox);
+
     void updateCurrentDirectory(const QString &path);
+    void loadConfig(); // Add the declaration of loadConfig() here
 
-    QLineEdit* getNameLineEdit() { return this->nameLineEdit; }
-    QSpinBox* getSeekJumpPeriodSpinBox() { return this->seekJumpPeriodSpinBox; }
-    QSpinBox* getSeekBuffersToPlaySpinBox() { return this->seekBuffersToPlaySpinBox; }
-    QSpinBox* getIsolationRampPeriodSpinBox() { return this->isolationRampPeriodSpinBox; }
-    QSpinBox* getIsolationHitBoxSizeSpinBox() { return this->isolationHitBoxSizeSpinBox; }
-    QSpinBox* getMinStemBackgroundLevelSpinBox() { return this->minStemBackgroundLevelSpinBox; }
-    QDoubleSpinBox* getFast2playDoubleSpinBox() { return this->fast2playDoubleSpinBox; }
-    QDoubleSpinBox* getFast1playDoubleSpinBox() { return this->fast1playDoubleSpinBox; }
-    QDoubleSpinBox* getSlow1playDoubleSpinBox() { return this->slow1playDoubleSpinBox; }
-    QSpinBox* getRecordPeriodSpinBox() { return this->recordPeriodSpinBox; }
-
-    void setVisible(bool visible);
-    void setNameLineEdit(QLineEdit* nameLineEdit) { this->nameLineEdit = nameLineEdit; }
-    void setSeekJumpPeriodSpinBox(QSpinBox* seekJumpPeriodSpinBox) { this->seekJumpPeriodSpinBox = seekJumpPeriodSpinBox; }
-    void setSeekBuffersToPlaySpinBox(QSpinBox* seekBuffersToPlaySpinBox) { this->seekBuffersToPlaySpinBox = seekBuffersToPlaySpinBox; }
-    void setIsolationRampPeriodSpinBox(QSpinBox* isolationRampPeriodSpinBox) { this->isolationRampPeriodSpinBox = isolationRampPeriodSpinBox; }
-    void setIsolationHitBoxSizeSpinBox(QSpinBox* isolationHitBoxSizeSpinBox) { this->isolationHitBoxSizeSpinBox = isolationHitBoxSizeSpinBox; }
-    void setMinStemBackgroundLevelSpinBox(QSpinBox* minStemBackgroundLevelSpinBox) { this->minStemBackgroundLevelSpinBox = minStemBackgroundLevelSpinBox; }
-    void setFast2playDoubleSpinBox(QDoubleSpinBox* fast2playDoubleSpinBox) { this->fast2playDoubleSpinBox = fast2playDoubleSpinBox; }
-    void setFast1playDoubleSpinBox(QDoubleSpinBox* fast1playDoubleSpinBox) { this->fast1playDoubleSpinBox = fast1playDoubleSpinBox; }
-    void setSlow1playDoubleSpinBox(QDoubleSpinBox* slow1playDoubleSpinBox) { this->slow1playDoubleSpinBox = slow1playDoubleSpinBox; }
-    void setRecordPeriodSpinBox(QSpinBox* recordPeriodSpinBox) { this->recordPeriodSpinBox = recordPeriodSpinBox; }
+private slots:
+    void onApplyClicked();
+    void onOkClicked();
 
 private:
-    ConfigData m_configData;
-    QHBoxLayout* mainLayout;
-    QLineEdit* nameLineEdit;
-    QSpinBox* seekJumpPeriodSpinBox;
-    QSpinBox* seekBuffersToPlaySpinBox;
-    QSpinBox* isolationRampPeriodSpinBox;
-    QSpinBox* isolationHitBoxSizeSpinBox;
-    QSpinBox* minStemBackgroundLevelSpinBox;
-    QDoubleSpinBox* fast2playDoubleSpinBox;
-    QDoubleSpinBox* fast1playDoubleSpinBox;
-    QDoubleSpinBox* slow1playDoubleSpinBox;
-    QSpinBox* recordPeriodSpinBox;
+    QHBoxLayout *mainLayout;
+    QLineEdit *nameLineEdit;
+    QSpinBox *seekJumpPeriodSpinBox;
+    QSpinBox *seekBuffersToPlaySpinBox;
+    QSpinBox *isolationRampPeriodSpinBox;
+    QSpinBox *isolationHitBoxSizeSpinBox;
+    QSpinBox *minStemBackgroundLevelSpinBox;
+    QDoubleSpinBox *fast2playDoubleSpinBox;
+    QDoubleSpinBox *fast1playDoubleSpinBox;
+    QDoubleSpinBox *slow1playDoubleSpinBox;
+    QSpinBox *recordPeriodSpinBox;
+    QPushButton *applyButton;
+    QPushButton *okButton;
+    // ConfigData m_configData
 };
 
 #endif // CONFIG_H

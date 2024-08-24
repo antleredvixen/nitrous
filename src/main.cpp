@@ -1,4 +1,3 @@
-// main.cpp
 #include "./ui_main.h"
 #include "main.h"
 #include "console.h"
@@ -99,7 +98,7 @@ Main::Main(QWidget* parent)
     vboxLayout->addLayout(statusDisplayLayout);
 
     // Create a label to display "Current Directory: "
-    QLabel *directoryPrefixLabel = new QLabel("<b>Current Directory: </b>");
+    QLabel *directoryPrefixLabel = new QLabel("<b>Current Directory:</b>");
 
     // Create a widget to display the current directory
     QWidget *statusBarWidget = new QWidget;
@@ -125,10 +124,9 @@ Main::Main(QWidget* parent)
     timer.start();
 
     connect(ui->actionOpen, &QAction::triggered, this, [this]() {
-        openFolder(currentDirectoryLabel, this, contentBrowser);
+        openFolder(currentDirectoryLabel, this, contentBrowser, configForm);
         QString newPath = currentDirectoryLabel->text();
         configForm->updateCurrentDirectory(newPath);
-        configForm->setVisible(QFile::exists(newPath + "/CONFIG.TXT"));
     });
 
     connect(ui->actionPreferences, &QAction::triggered, this, &Main::showPreferences);
@@ -137,7 +135,7 @@ Main::Main(QWidget* parent)
 
 void Main::deviceConnection() {
     bool newConnectionStatus = scan.verifyConnection();
-    if (newConnectionStatus != connectionStatus) {
+    if (newConnectionStatus!= connectionStatus) {
         connectionStatus = newConnectionStatus;
         scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
         if (connectionStatus) {

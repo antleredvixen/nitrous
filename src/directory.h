@@ -16,6 +16,7 @@
 
 void directory(QLabel *label, bool connectionStatus, Browser *browser, Config *config);
 QString getCurrentDirectoryLocation();
-void openFolder(QLabel *label, QMainWindow *mainWindow, Browser *browser);
+void openFolder(QLabel *label, QMainWindow *mainWindow, Browser *browser, Config *config);
+void loadConfig(Config *config, const QString &directory);
 
 #endif // DIRECTORY_H

@@ -18,9 +18,9 @@ bool ConfigLoad::loadConfig(ConfigData& config) {
         QJsonDocument jsonDoc = QJsonDocument::fromJson(configFile.readAll());
         QJsonObject jsonObject = jsonDoc.object();
 
-        config.name = jsonObject["name"].toString();
-
         QJsonObject parameters = jsonObject["parameters"].toObject();
+
+        config.name = jsonObject["name"].toString();
         config.seekJumpPeriod = parameters["SeekJumpPeriod_mSecs"].toInt();
         config.seekBuffersToPlay = parameters["SeekBuffersToPlay"].toInt();
         config.isolationRampPeriod = parameters["IsolationRampPeriod_mSecs"].toInt();
