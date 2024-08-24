@@ -5,13 +5,17 @@ Config::Config(QWidget *parent) : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout;
 
+    // Add the Configuration label
+    QLabel *configLabel = new QLabel("<b>Configuration</b>");
+    mainLayout->addWidget(configLabel, 0, Qt::AlignLeft);
+
     QHBoxLayout *columnLayout = new QHBoxLayout;
 
     QVBoxLayout *leftColumn = new QVBoxLayout;
     QVBoxLayout *rightColumn = new QVBoxLayout;
 
     QHBoxLayout *nameLayout = new QHBoxLayout;
-    QLabel *nameLabel = new QLabel("<b>Name:</b>");
+    QLabel *nameLabel = new QLabel("Name:");
     nameLabel->setAlignment(Qt::AlignRight);
     nameLayout->addWidget(nameLabel);
     nameLayout->addWidget(nameLineEdit = new QLineEdit);
@@ -19,7 +23,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     leftColumn->addLayout(nameLayout);
 
     QHBoxLayout *seekJumpPeriodLayout = new QHBoxLayout;
-    QLabel *seekJumpPeriodLabel = new QLabel("<b>Seek Jump Period:</b>");
+    QLabel *seekJumpPeriodLabel = new QLabel("Seek Jump Period:");
     seekJumpPeriodLabel->setAlignment(Qt::AlignRight);
     seekJumpPeriodLayout->addWidget(seekJumpPeriodLabel);
     seekJumpPeriodLayout->addWidget(seekJumpPeriodSpinBox = new QSpinBox);
@@ -27,7 +31,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     leftColumn->addLayout(seekJumpPeriodLayout);
 
     QHBoxLayout *seekBuffersToPlayLayout = new QHBoxLayout;
-    QLabel *seekBuffersToPlayLabel = new QLabel("<b>Seek Buffers To Play:</b>");
+    QLabel *seekBuffersToPlayLabel = new QLabel("Seek Buffers To Play:");
     seekBuffersToPlayLabel->setAlignment(Qt::AlignRight);
     seekBuffersToPlayLayout->addWidget(seekBuffersToPlayLabel);
     seekBuffersToPlayLayout->addWidget(seekBuffersToPlaySpinBox = new QSpinBox);
@@ -35,7 +39,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     leftColumn->addLayout(seekBuffersToPlayLayout);
 
     QHBoxLayout *isolationRampPeriodLayout = new QHBoxLayout;
-    QLabel *isolationRampPeriodLabel = new QLabel("<b>Isolation Ramp Period:</b>");
+    QLabel *isolationRampPeriodLabel = new QLabel("Isolation Ramp Period:");
     isolationRampPeriodLabel->setAlignment(Qt::AlignRight);
     isolationRampPeriodLayout->addWidget(isolationRampPeriodLabel);
     isolationRampPeriodLayout->addWidget(isolationRampPeriodSpinBox = new QSpinBox);
@@ -43,7 +47,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     leftColumn->addLayout(isolationRampPeriodLayout);
 
     QHBoxLayout *isolationHitBoxSizeLayout = new QHBoxLayout;
-    QLabel *isolationHitBoxSizeLabel = new QLabel("<b>Isolation Hit Box Size:</b>");
+    QLabel *isolationHitBoxSizeLabel = new QLabel("Isolation Hit Box Size:");
     isolationHitBoxSizeLabel->setAlignment(Qt::AlignRight);
     isolationHitBoxSizeLayout->addWidget(isolationHitBoxSizeLabel);
     isolationHitBoxSizeLayout->addWidget(isolationHitBoxSizeSpinBox = new QSpinBox);
@@ -51,7 +55,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     leftColumn->addLayout(isolationHitBoxSizeLayout);
 
     QHBoxLayout *minStemBackgroundLevelLayout = new QHBoxLayout;
-    QLabel *minStemBackgroundLevelLabel = new QLabel("<b>Min Stem Background Level:</b>");
+    QLabel *minStemBackgroundLevelLabel = new QLabel("Min Stem Background Level:");
     minStemBackgroundLevelLabel->setAlignment(Qt::AlignRight);
     minStemBackgroundLevelLayout->addWidget(minStemBackgroundLevelLabel);
     minStemBackgroundLevelLayout->addWidget(minStemBackgroundLevelSpinBox = new QSpinBox);
@@ -59,7 +63,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     rightColumn->addLayout(minStemBackgroundLevelLayout);
 
     QHBoxLayout *fast2playLayout = new QHBoxLayout;
-    QLabel *fast2playLabel = new QLabel("<b>Fast 2 Play:</b>");
+    QLabel *fast2playLabel = new QLabel("Fast 2 Play:");
     fast2playLabel->setAlignment(Qt::AlignRight);
     fast2playLayout->addWidget(fast2playLabel);
     fast2playLayout->addWidget(fast2playDoubleSpinBox = new QDoubleSpinBox);
@@ -67,7 +71,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     rightColumn->addLayout(fast2playLayout);
 
     QHBoxLayout *fast1playLayout = new QHBoxLayout;
-    QLabel *fast1playLabel = new QLabel("<b>Fast 1 Play:</b>");
+    QLabel *fast1playLabel = new QLabel("Fast 1 Play:");
     fast1playLabel->setAlignment(Qt::AlignRight);
     fast1playLayout->addWidget(fast1playLabel);
     fast1playLayout->addWidget(fast1playDoubleSpinBox = new QDoubleSpinBox);
@@ -75,7 +79,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     rightColumn->addLayout(fast1playLayout);
 
     QHBoxLayout *slow1playLayout = new QHBoxLayout;
-    QLabel *slow1playLabel = new QLabel("<b>Slow 1 Play:</b>");
+    QLabel *slow1playLabel = new QLabel("Slow 1 Play:");
     slow1playLabel->setAlignment(Qt::AlignRight);
     slow1playLayout->addWidget(slow1playLabel);
     slow1playLayout->addWidget(slow1playDoubleSpinBox = new QDoubleSpinBox);
@@ -83,7 +87,7 @@ Config::Config(QWidget *parent) : QWidget(parent)
     rightColumn->addLayout(slow1playLayout);
 
     QHBoxLayout *recordPeriodLayout = new QHBoxLayout;
-    QLabel *recordPeriodLabel = new QLabel("<b>Record Period:</b>");
+    QLabel *recordPeriodLabel = new QLabel("Record Period:");
     recordPeriodLabel->setAlignment(Qt::AlignRight);
     recordPeriodLayout->addWidget(recordPeriodLabel);
     recordPeriodLayout->addWidget(recordPeriodSpinBox = new QSpinBox);
