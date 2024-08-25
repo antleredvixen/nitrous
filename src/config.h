@@ -41,13 +41,15 @@ public:
     void setRecordPeriodSpinBox(QSpinBox *spinBox);
 
     void updateCurrentDirectory(const QString &path);
-    void loadConfig();
 
 private slots:
     void onApplyClicked();
     void onOkClicked();
 
 private:
+    void loadConfig();
+    void clearConfigForm();
+
     QHBoxLayout *mainLayout;
     QLineEdit *nameLineEdit;
     QSpinBox *seekJumpPeriodSpinBox;

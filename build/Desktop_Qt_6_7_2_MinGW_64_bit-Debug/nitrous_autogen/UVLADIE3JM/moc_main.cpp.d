@@ -2,11 +2,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDir \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonArray \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonDocument \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonObject \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QLocale \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QRegularExpression \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QString \
@@ -33,8 +29,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayview.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qcborcommon.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -77,10 +71,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterator.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonarray.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsondocument.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonobject.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qlist.h \
@@ -155,7 +145,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtypes.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qutf8stringview.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qversiontagging.h \

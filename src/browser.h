@@ -4,34 +4,28 @@
 
 #include <QWidget>
 #include <QListWidget>
+#include <QLabel>
 #include <QVBoxLayout>
 #include <QDir>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QLabel>
-#include <QSettings>
-#include <QRegularExpression>
 #include "console.h"
+#include "config.h"
 
 class Browser : public QWidget
 {
     Q_OBJECT
 
 public:
-    Browser(Console *console, QLabel *currentDirectoryLabel, QWidget *parent = nullptr);
+    Browser(Console *console, QLabel *currentDirectoryLabel, Config *configForm, QWidget *parent = nullptr);
     void populateList(const QString &directory);
-
-signals:
-    void directoryChanged(const QString &directory);
 
 private slots:
     void handleItemDoubleClick(QListWidgetItem *item);
 
 private:
-    QListWidget *listWidget;
     Console *console;
     QLabel *currentDirectoryLabel;
+    QListWidget *listWidget;
+    Config *configForm;
 };
 
 #endif // BROWSER_H

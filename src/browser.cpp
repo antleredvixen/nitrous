@@ -1,15 +1,16 @@
 // browser.cpp
 #include "browser.h"
 
-Browser::Browser(Console *console, QLabel *currentDirectoryLabel, QWidget *parent) : QWidget(parent)
+Browser::Browser(Console *console, QLabel *currentDirectoryLabel, Config *configForm, QWidget *parent) : QWidget(parent)
 {
     this->console = console;
     this->currentDirectoryLabel = currentDirectoryLabel;
-
+    this->configForm = configForm;
     listWidget = new QListWidget(this);
 
-    // Create a label to display "Browser"
+    // Create a label to display "Browser" in bold
     QLabel *browserLabel = new QLabel("<b>Browser</b>", this);
+    browserLabel->setTextFormat(Qt::RichText);
 
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(browserLabel); // Add the label to the layout
@@ -72,5 +73,9 @@ void Browser::handleItemDoubleClick(QListWidgetItem *item) {
     }
     currentDirectoryLabel->setText(currentDirectory); // Update the directory label
     populateList(currentDirectory);
+
+    // Load the config if present in the navigated directory
+    configForm->updateCurrentDirectory(currentDirectory);
+
     qDebug() << "Current directory: " << currentDirectory; // Print the current directory to the console
 }

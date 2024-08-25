@@ -1,11 +1,7 @@
 C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/UVLADIE3JM/moc_browser.cpp: C:/Users/Katie/Code/antleredvixen/nitrous/src/browser.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDir \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonArray \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonDocument \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QJsonObject \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QRegularExpression \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QString \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \
@@ -26,8 +22,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qbytearrayview.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcalendar.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qcborcommon.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -64,10 +58,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qiterator.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonarray.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsondocument.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonobject.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qlist.h \
@@ -96,7 +86,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qset.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/qsettings.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qshareddata_impl.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qsharedpointer.h \
@@ -138,7 +127,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/qtypes.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qutf8stringview.h \
-  C:/Qt/6.7.2/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/qversiontagging.h \
@@ -176,12 +164,18 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QDoubleSpinBox \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QListWidget \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QScrollBar \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QSpinBox \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTextEdit \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractitemview.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -193,12 +187,15 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayoutitem.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlineedit.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlistview.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlistwidget.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qscrollbar.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qslider.h \
+  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qspinbox.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabbar.h \
@@ -437,4 +434,6 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h \
+  C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/console.h

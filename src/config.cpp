@@ -5,6 +5,7 @@
 #include "config_update.h"
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QFile>
 
 Config::Config(QWidget *parent) : QWidget(parent)
 {
@@ -123,15 +124,11 @@ Config::Config(QWidget *parent) : QWidget(parent)
 
     connect(applyButton, &QPushButton::clicked, this, &Config::onApplyClicked);
     connect(okButton, &QPushButton::clicked, this, &Config::onOkClicked);
-
-    loadConfig();
 }
 
 Config::~Config()
 {
 }
-
-// ... (other getter and setter methods remain unchanged)
 
 void Config::updateCurrentDirectory(const QString &path)
 {
@@ -154,4 +151,35 @@ void Config::onOkClicked()
 {
     onApplyClicked();
     close();
+}
+
+void Config::loadConfig()
+{
+    QString configFilePath = m_currentDirectory + "/CONFIG.TXT";
+    if (QFile::exists(configFilePath)) {
+        if (ConfigLoad::loadConfig(m_configData, m_currentDirectory)) {
+            ConfigUpdate update;
+            update.updateUIFromConfig(m_configData, nameLineEdit, seekJumpPeriodSpinBox,
+                                      seekBuffersToPlaySpinBox, isolationRampPeriodSpinBox,
+                                      isolationHitBoxSizeSpinBox, minStemBackgroundLevelSpinBox,
+                                      fast2playDoubleSpinBox, fast1playDoubleSpinBox,
+                                      slow1playDoubleSpinBox, recordPeriodSpinBox);
+        }
+    } else {
+        clearConfigForm();
+    }
+}
+
+void Config::clearConfigForm()
+{
+    nameLineEdit->clear();
+    seekJumpPeriodSpinBox->setValue(0);
+    seekBuffersToPlaySpinBox->setValue(0);
+    isolationRampPeriodSpinBox->setValue(0);
+    isolationHitBoxSizeSpinBox->setValue(0);
+    minStemBackgroundLevelSpinBox->setValue(0);
+    fast2playDoubleSpinBox->setValue(0.0);
+    fast1playDoubleSpinBox->setValue(0.0);
+    slow1playDoubleSpinBox->setValue(0.0);
+    recordPeriodSpinBox->setValue(0);
 }

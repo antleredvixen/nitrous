@@ -39,8 +39,8 @@ Main::Main(QWidget* parent)
     currentDirectoryLabel(new QLabel),
     deviceGraphic(nullptr),
     scan(),
-    contentBrowser(new Browser(consoleWindow, currentDirectoryLabel, this)),
-    configForm(new Config(this))
+    configForm(new Config(this)),
+    contentBrowser(nullptr)  // Initialize to nullptr first
 {
     ui->setupUi(this);
 
@@ -48,6 +48,9 @@ Main::Main(QWidget* parent)
 
     // Create the device graphic
     deviceGraphic = new Status(this);
+
+    // Initialize contentBrowser after configForm
+    contentBrowser = new Browser(consoleWindow, currentDirectoryLabel, configForm, this);
 
     // Create a vertical layout for the central widget
     QVBoxLayout *vboxLayout = new QVBoxLayout(ui->centralwidget);

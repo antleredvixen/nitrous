@@ -1,8 +1,6 @@
 // directory.cpp
 #include "directory.h"
 #include "config.h"
-#include "config_load.h"
-#include "config_update.h"
 #include "console.h"
 
 void directory(QLabel *label, bool connectionStatus, Browser *browser, Config *config, Console *console) {
@@ -30,18 +28,6 @@ void directory(QLabel *label, bool connectionStatus, Browser *browser, Config *c
 
 QString getCurrentDirectoryLocation() {
     return QDir::currentPath();
-}
-
-void Config::loadConfig()
-{
-    if (ConfigLoad::loadConfig(m_configData, m_currentDirectory)) {
-        ConfigUpdate update;
-        update.updateUIFromConfig(m_configData, nameLineEdit, seekJumpPeriodSpinBox,
-                                  seekBuffersToPlaySpinBox, isolationRampPeriodSpinBox,
-                                  isolationHitBoxSizeSpinBox, minStemBackgroundLevelSpinBox,
-                                  fast2playDoubleSpinBox, fast1playDoubleSpinBox,
-                                  slow1playDoubleSpinBox, recordPeriodSpinBox);
-    }
 }
 
 void openFolder(QLabel *label, QMainWindow *mainWindow, Browser *browser, Config *config, Console *console) {
