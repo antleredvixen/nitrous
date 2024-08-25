@@ -9,6 +9,7 @@
 #include <QDoubleSpinBox>
 #include <QPushButton>
 #include <QLabel>
+#include "config_data.h"
 
 class Config : public QWidget
 {
@@ -20,36 +21,27 @@ public:
 
     QLineEdit *getNameLineEdit();
     void setNameLineEdit(QLineEdit *lineEdit);
-
     QSpinBox *getSeekJumpPeriodSpinBox();
     void setSeekJumpPeriodSpinBox(QSpinBox *spinBox);
-
     QSpinBox *getSeekBuffersToPlaySpinBox();
     void setSeekBuffersToPlaySpinBox(QSpinBox *spinBox);
-
     QSpinBox *getIsolationRampPeriodSpinBox();
     void setIsolationRampPeriodSpinBox(QSpinBox *spinBox);
-
     QSpinBox *getIsolationHitBoxSizeSpinBox();
     void setIsolationHitBoxSizeSpinBox(QSpinBox *spinBox);
-
     QSpinBox *getMinStemBackgroundLevelSpinBox();
     void setMinStemBackgroundLevelSpinBox(QSpinBox *spinBox);
-
     QDoubleSpinBox *getFast2playDoubleSpinBox();
     void setFast2playDoubleSpinBox(QDoubleSpinBox *spinBox);
-
     QDoubleSpinBox *getFast1playDoubleSpinBox();
     void setFast1playDoubleSpinBox(QDoubleSpinBox *spinBox);
-
     QDoubleSpinBox *getSlow1playDoubleSpinBox();
     void setSlow1playDoubleSpinBox(QDoubleSpinBox *spinBox);
-
     QSpinBox *getRecordPeriodSpinBox();
     void setRecordPeriodSpinBox(QSpinBox *spinBox);
 
     void updateCurrentDirectory(const QString &path);
-    void loadConfig(); // Add the declaration of loadConfig() here
+    void loadConfig();
 
 private slots:
     void onApplyClicked();
@@ -69,7 +61,9 @@ private:
     QSpinBox *recordPeriodSpinBox;
     QPushButton *applyButton;
     QPushButton *okButton;
-    // ConfigData m_configData
+
+    ConfigData m_configData;
+    QString m_currentDirectory;
 };
 
 #endif // CONFIG_H

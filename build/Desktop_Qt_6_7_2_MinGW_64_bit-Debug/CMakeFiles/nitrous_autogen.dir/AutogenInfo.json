@@ -273,12 +273,6 @@
 			null
 		],
 		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_setup_ui.h",
-			"MU",
-			"UVLADIE3JM/moc_config_setup_ui.cpp",
-			null
-		],
-		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_update.h",
 			"MU",
 			"UVLADIE3JM/moc_config_update.cpp",
@@ -411,11 +405,6 @@
 		],
 		[
 			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_save.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Katie/Code/antleredvixen/nitrous/src/config_setup_ui.cpp",
 			"MU",
 			null
 		],

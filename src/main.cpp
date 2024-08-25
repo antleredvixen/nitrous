@@ -1,3 +1,4 @@
+// main.cpp
 #include "./ui_main.h"
 #include "main.h"
 #include "console.h"
@@ -109,7 +110,7 @@ Main::Main(QWidget* parent)
     connectionStatus = scan.verifyConnection();
     scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
     if (connectionStatus) {
-        directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm);
+        directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm, consoleWindow);
         statusLabel->setText("<b>Status: </b><font color='lime'>Connected</font>");
     } else {
         currentDirectoryLabel->setText(QDir::currentPath());
@@ -123,9 +124,7 @@ Main::Main(QWidget* parent)
     timer.start();
 
     connect(ui->actionOpen, &QAction::triggered, this, [this]() {
-        openFolder(currentDirectoryLabel, this, contentBrowser, configForm);
-        QString newPath = currentDirectoryLabel->text();
-        configForm->updateCurrentDirectory(newPath);
+        openFolder(currentDirectoryLabel, this, contentBrowser, configForm, consoleWindow);
     });
 
     connect(ui->actionPreferences, &QAction::triggered, this, &Main::showPreferences);
@@ -134,11 +133,11 @@ Main::Main(QWidget* parent)
 
 void Main::deviceConnection() {
     bool newConnectionStatus = scan.verifyConnection();
-    if (newConnectionStatus!= connectionStatus) {
+    if (newConnectionStatus != connectionStatus) {
         connectionStatus = newConnectionStatus;
         scan.displayConnection(connectionStatus, consoleWindow->getConsoleTextEdit());
         if (connectionStatus) {
-            directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm);
+            directory(currentDirectoryLabel, connectionStatus, contentBrowser, configForm, consoleWindow);
             statusLabel->setText("<b>Status: </b><font color='lime'>Connected</font>");
         } else {
             currentDirectoryLabel->setText(defaultDirectory);

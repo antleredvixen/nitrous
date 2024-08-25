@@ -1599,6 +1599,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/main.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QRegularExpression
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QString
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QTranslator
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h
@@ -2289,6 +2290,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/main.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include/libusb.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/browser.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h
+ mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/connect.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/console.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/main.h
@@ -2699,6 +2701,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/config_setup_ui.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/status.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/QString
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h
@@ -3076,6 +3079,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/nitrous_autogen/moc_predefs.h
  mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h
+ mdp:C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config.cpp
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h
 C:/Users/Katie/Code/antleredvixen/nitrous/src/config_file_handler.h

@@ -50,7 +50,7 @@ qt_add_executable(nitrous
 
     src/config_load.h src/config_load.cpp
     src/config_save.h src/config_save.cpp
-    src/config_setup_ui.h src/config_setup_ui.cpp
+
     src/config_update.h src/config_update.cpp
 )
 

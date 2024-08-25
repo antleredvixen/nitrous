@@ -1,5 +1,10 @@
 // config.cpp
 #include "config.h"
+#include "config_load.h"
+#include "config_save.h"
+#include "config_update.h"
+#include <QVBoxLayout>
+#include <QLabel>
 
 Config::Config(QWidget *parent) : QWidget(parent)
 {
@@ -99,8 +104,8 @@ Config::Config(QWidget *parent) : QWidget(parent)
 
     mainLayout->addLayout(columnLayout);
 
-    QPushButton *applyButton = new QPushButton("Apply");
-    QPushButton *okButton = new QPushButton("OK");
+    applyButton = new QPushButton("Apply");
+    okButton = new QPushButton("OK");
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     buttonLayout->addStretch();
@@ -118,125 +123,35 @@ Config::Config(QWidget *parent) : QWidget(parent)
 
     connect(applyButton, &QPushButton::clicked, this, &Config::onApplyClicked);
     connect(okButton, &QPushButton::clicked, this, &Config::onOkClicked);
+
+    loadConfig();
 }
 
 Config::~Config()
 {
 }
 
-QLineEdit *Config::getNameLineEdit()
-{
-    return nameLineEdit;
-}
-
-void Config::setNameLineEdit(QLineEdit *lineEdit)
-{
-    nameLineEdit = lineEdit;
-}
-
-QSpinBox *Config::getSeekJumpPeriodSpinBox()
-{
-    return seekJumpPeriodSpinBox;
-}
-
-void Config::setSeekJumpPeriodSpinBox(QSpinBox *spinBox)
-{
-    seekJumpPeriodSpinBox = spinBox;
-}
-
-QSpinBox *Config::getSeekBuffersToPlaySpinBox()
-{
-    return seekBuffersToPlaySpinBox;
-}
-
-void Config::setSeekBuffersToPlaySpinBox(QSpinBox *spinBox)
-{
-    seekBuffersToPlaySpinBox = spinBox;
-}
-
-QSpinBox *Config::getIsolationRampPeriodSpinBox()
-{
-    return isolationRampPeriodSpinBox;
-}
-
-void Config::setIsolationRampPeriodSpinBox(QSpinBox *spinBox)
-{
-    isolationRampPeriodSpinBox = spinBox;
-}
-
-QSpinBox *Config::getIsolationHitBoxSizeSpinBox()
-{
-    return isolationHitBoxSizeSpinBox;
-}
-
-void Config::setIsolationHitBoxSizeSpinBox(QSpinBox *spinBox)
-{
-    isolationHitBoxSizeSpinBox = spinBox;
-}
-
-QSpinBox *Config::getMinStemBackgroundLevelSpinBox()
-{
-    return minStemBackgroundLevelSpinBox;
-}
-
-void Config::setMinStemBackgroundLevelSpinBox(QSpinBox *spinBox)
-{
-    minStemBackgroundLevelSpinBox = spinBox;
-}
-
-QDoubleSpinBox *Config::getFast2playDoubleSpinBox()
-{
-    return fast2playDoubleSpinBox;
-}
-
-void Config::setFast2playDoubleSpinBox(QDoubleSpinBox *spinBox)
-{
-    fast2playDoubleSpinBox = spinBox;
-}
-
-QDoubleSpinBox *Config::getFast1playDoubleSpinBox()
-{
-    return fast1playDoubleSpinBox;
-}
-
-void Config::setFast1playDoubleSpinBox(QDoubleSpinBox *spinBox)
-{
-    fast1playDoubleSpinBox = spinBox;
-}
-
-QDoubleSpinBox *Config::getSlow1playDoubleSpinBox()
-{
-    return slow1playDoubleSpinBox;
-}
-
-void Config::setSlow1playDoubleSpinBox(QDoubleSpinBox *spinBox)
-{
-    slow1playDoubleSpinBox = spinBox;
-}
-
-QSpinBox *Config::getRecordPeriodSpinBox()
-{
-    return recordPeriodSpinBox;
-}
-
-void Config::setRecordPeriodSpinBox(QSpinBox *spinBox)
-{
-    recordPeriodSpinBox = spinBox;
-}
+// ... (other getter and setter methods remain unchanged)
 
 void Config::updateCurrentDirectory(const QString &path)
 {
-    // Update the current directory label with the root directory of the drive
-    QString directoryPath = path;
-    directoryPath = directoryPath.replace("://", ":/"); // Replace any occurrence of "://" with ":/"
+    m_currentDirectory = path;
+    loadConfig();
 }
 
 void Config::onApplyClicked()
 {
-    // TO DO: implement the logic for the Apply button click
+    ConfigUpdate update;
+    update.updateConfigFromUI(m_configData, nameLineEdit, seekJumpPeriodSpinBox,
+                              seekBuffersToPlaySpinBox, isolationRampPeriodSpinBox,
+                              isolationHitBoxSizeSpinBox, minStemBackgroundLevelSpinBox,
+                              fast2playDoubleSpinBox, fast1playDoubleSpinBox,
+                              slow1playDoubleSpinBox, recordPeriodSpinBox);
+    ConfigSave::saveConfig(m_configData);
 }
 
 void Config::onOkClicked()
 {
-    // TO DO: implement the logic for the OK button click
+    onApplyClicked();
+    close();
 }

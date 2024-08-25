@@ -3,14 +3,12 @@
 #define CONFIG_LOAD_H
 
 #include <QString>
-#include <QFile>
-#include <QTextStream>
 #include "config_data.h"
 
 class ConfigLoad
 {
 public:
-    static bool loadConfig(ConfigData &configData);
+    static bool loadConfig(ConfigData &configData, const QString& directory);
 };
 
 #endif // CONFIG_LOAD_H

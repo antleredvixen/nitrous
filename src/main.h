@@ -49,7 +49,7 @@ private:
     Connect scan;
     Browser *contentBrowser;
     Config *configForm;
-    QLabel *statusLabel; // Add this line
+    QLabel *statusLabel;
     QString defaultDirectory;
 };
 

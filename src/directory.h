@@ -13,10 +13,11 @@
 #include <QRegularExpression>
 #include "browser.h"
 #include "config.h"
+#include "console.h"
 
-void directory(QLabel *label, bool connectionStatus, Browser *browser, Config *config);
+void directory(QLabel *label, bool connectionStatus, Browser *browser, Config *config, Console *console);
 QString getCurrentDirectoryLocation();
-void openFolder(QLabel *label, QMainWindow *mainWindow, Browser *browser, Config *config);
-void loadConfig(Config *config, const QString &directory);
+void openFolder(QLabel *label, QMainWindow *mainWindow, Browser *browser, Config *config, Console *console);
+void loadConfig(Config *config, const QString &directory, Console *console);
 
 #endif // DIRECTORY_H

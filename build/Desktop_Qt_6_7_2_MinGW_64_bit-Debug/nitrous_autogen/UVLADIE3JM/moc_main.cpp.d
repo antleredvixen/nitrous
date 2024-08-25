@@ -9,6 +9,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Qt/6.7.2/mingw_64/include/QtCore/QRegularExpression \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QSettings \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QStorageInfo \
+  C:/Qt/6.7.2/mingw_64/include/QtCore/QString \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QTranslator \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
@@ -698,6 +699,7 @@ C:/Users/Katie/Code/antleredvixen/nitrous/build/Desktop_Qt_6_7_2_MinGW_64_bit-De
   C:/Users/Katie/Code/antleredvixen/nitrous/lib/libusb-1.0.27/include/libusb.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/browser.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/config.h \
+  C:/Users/Katie/Code/antleredvixen/nitrous/src/config_data.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/connect.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/console.h \
   C:/Users/Katie/Code/antleredvixen/nitrous/src/status.h

@@ -6,18 +6,13 @@
 #include <QJsonObject>
 #include <QDir>
 
-bool ConfigLoad::loadConfig(ConfigData& config) {
-    // Get the current directory
-    QString currentDir = QDir::currentPath();
-
-    // Construct the path to CONFIG.TXT in the current directory
-    QString configFilePath = currentDir + "/CONFIG.TXT";
-
+bool ConfigLoad::loadConfig(ConfigData& config, const QString& directory) {
+    // Construct the path to CONFIG.TXT in the given directory
+    QString configFilePath = directory + "/CONFIG.TXT";
     QFile configFile(configFilePath);
     if (configFile.open(QFile::ReadOnly)) {
         QJsonDocument jsonDoc = QJsonDocument::fromJson(configFile.readAll());
         QJsonObject jsonObject = jsonDoc.object();
-
         QJsonObject parameters = jsonObject["parameters"].toObject();
 
         config.name = jsonObject["name"].toString();
