@@ -1,14 +1,14 @@
 {
-    "name": "",
+    "name": "Stem Player Configuration",
     "parameters": {
-        "Fast1play": 0,
-        "Fast2play": 0,
-        "IsolationHitBoxSize": 0,
-        "IsolationRampPeriod_mSecs": 0,
-        "MinStemBackgroundLevel": 0,
-        "RecordPeriod_secs": 0,
-        "SeekBuffersToPlay": 0,
-        "SeekJumpPeriod_mSecs": 0,
-        "Slow1play": 0
+        "Fast1play": 1.15,
+        "Fast2play": 1.25,
+        "IsolationHitBoxSize": 10,
+        "IsolationRampPeriod_mSecs": 50,
+        "MinStemBackgroundLevel": 130,
+        "RecordPeriod_secs": 68,
+        "SeekBuffersToPlay": 4,
+        "SeekJumpPeriod_mSecs": 1000,
+        "Slow1play": 0.5
     }
 }

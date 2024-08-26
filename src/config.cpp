@@ -3,7 +3,7 @@
 #include "config_load.h"
 #include "config_save.h"
 #include "config_update.h"
-#include <QVBoxLayout>
+#include <QGridLayout>
 #include <QLabel>
 #include <QFile>
 
@@ -15,95 +15,108 @@ Config::Config(QWidget *parent) : QWidget(parent)
     QLabel *configLabel = new QLabel("<b>Configuration</b>");
     mainLayout->addWidget(configLabel, 0, Qt::AlignLeft);
 
-    QHBoxLayout *columnLayout = new QHBoxLayout;
+    QGridLayout *gridLayout = new QGridLayout;
+    gridLayout->setColumnStretch(0, 1);  // Left column
+    gridLayout->setColumnStretch(1, 0);  // Left column input
+    gridLayout->setColumnStretch(2, 1);  // Spacer
+    gridLayout->setColumnStretch(3, 1);  // Right column
+    gridLayout->setColumnStretch(4, 0);  // Right column input
+    gridLayout->setHorizontalSpacing(10);
 
-    QVBoxLayout *leftColumn = new QVBoxLayout;
-    QVBoxLayout *rightColumn = new QVBoxLayout;
+    // Left Column
+    int row = 0;
 
-    QHBoxLayout *nameLayout = new QHBoxLayout;
-    QLabel *nameLabel = new QLabel("Name:");
-    nameLabel->setAlignment(Qt::AlignRight);
-    nameLayout->addWidget(nameLabel);
-    nameLayout->addWidget(nameLineEdit = new QLineEdit);
+    // Name
+    gridLayout->addWidget(new QLabel("Name:"), row, 0, Qt::AlignRight);
+    nameLineEdit = new QLineEdit;
     nameLineEdit->setFixedWidth(150);
-    leftColumn->addLayout(nameLayout);
+    gridLayout->addWidget(nameLineEdit, row, 1);
+    row++;
 
-    QHBoxLayout *seekJumpPeriodLayout = new QHBoxLayout;
-    QLabel *seekJumpPeriodLabel = new QLabel("Seek Jump Period:");
-    seekJumpPeriodLabel->setAlignment(Qt::AlignRight);
-    seekJumpPeriodLayout->addWidget(seekJumpPeriodLabel);
-    seekJumpPeriodLayout->addWidget(seekJumpPeriodSpinBox = new QSpinBox);
+    // Seek Jump Period
+    gridLayout->addWidget(new QLabel("Seek Jump Period:"), row, 0, Qt::AlignRight);
+    QHBoxLayout *seekJumpLayout = new QHBoxLayout;
+    seekJumpPeriodSpinBox = new QSpinBox;
+    seekJumpPeriodSpinBox->setMaximum(9999);
     seekJumpPeriodSpinBox->setFixedWidth(50);
-    leftColumn->addLayout(seekJumpPeriodLayout);
+    seekJumpPeriodSpinBox->setAlignment(Qt::AlignRight);
+    seekJumpLayout->addWidget(seekJumpPeriodSpinBox);
+    seekJumpLayout->addWidget(new QLabel("ms"));
+    seekJumpLayout->addStretch();
+    gridLayout->addLayout(seekJumpLayout, row, 1);
+    row++;
 
-    QHBoxLayout *seekBuffersToPlayLayout = new QHBoxLayout;
-    QLabel *seekBuffersToPlayLabel = new QLabel("Seek Buffers To Play:");
-    seekBuffersToPlayLabel->setAlignment(Qt::AlignRight);
-    seekBuffersToPlayLayout->addWidget(seekBuffersToPlayLabel);
-    seekBuffersToPlayLayout->addWidget(seekBuffersToPlaySpinBox = new QSpinBox);
+    // Seek Buffers To Play
+    gridLayout->addWidget(new QLabel("Seek Buffers To Play:"), row, 0, Qt::AlignRight);
+    seekBuffersToPlaySpinBox = new QSpinBox;
     seekBuffersToPlaySpinBox->setFixedWidth(50);
-    leftColumn->addLayout(seekBuffersToPlayLayout);
+    seekBuffersToPlaySpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(seekBuffersToPlaySpinBox, row, 1);
+    row++;
 
-    QHBoxLayout *isolationRampPeriodLayout = new QHBoxLayout;
-    QLabel *isolationRampPeriodLabel = new QLabel("Isolation Ramp Period:");
-    isolationRampPeriodLabel->setAlignment(Qt::AlignRight);
-    isolationRampPeriodLayout->addWidget(isolationRampPeriodLabel);
-    isolationRampPeriodLayout->addWidget(isolationRampPeriodSpinBox = new QSpinBox);
+    // Isolation Ramp Period
+    gridLayout->addWidget(new QLabel("Isolation Ramp Period:"), row, 0, Qt::AlignRight);
+    QHBoxLayout *isolationRampLayout = new QHBoxLayout;
+    isolationRampPeriodSpinBox = new QSpinBox;
     isolationRampPeriodSpinBox->setFixedWidth(50);
-    leftColumn->addLayout(isolationRampPeriodLayout);
+    isolationRampPeriodSpinBox->setAlignment(Qt::AlignRight);
+    isolationRampLayout->addWidget(isolationRampPeriodSpinBox);
+    isolationRampLayout->addWidget(new QLabel("ms"));
+    isolationRampLayout->addStretch();
+    gridLayout->addLayout(isolationRampLayout, row, 1);
+    row++;
 
-    QHBoxLayout *isolationHitBoxSizeLayout = new QHBoxLayout;
-    QLabel *isolationHitBoxSizeLabel = new QLabel("Isolation Hit Box Size:");
-    isolationHitBoxSizeLabel->setAlignment(Qt::AlignRight);
-    isolationHitBoxSizeLayout->addWidget(isolationHitBoxSizeLabel);
-    isolationHitBoxSizeLayout->addWidget(isolationHitBoxSizeSpinBox = new QSpinBox);
+    // Isolation Hit Box Size
+    gridLayout->addWidget(new QLabel("Isolation Hit Box Size:"), row, 0, Qt::AlignRight);
+    isolationHitBoxSizeSpinBox = new QSpinBox;
     isolationHitBoxSizeSpinBox->setFixedWidth(50);
-    leftColumn->addLayout(isolationHitBoxSizeLayout);
+    isolationHitBoxSizeSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(isolationHitBoxSizeSpinBox, row, 1);
 
-    QHBoxLayout *minStemBackgroundLevelLayout = new QHBoxLayout;
-    QLabel *minStemBackgroundLevelLabel = new QLabel("Min Stem Background Level:");
-    minStemBackgroundLevelLabel->setAlignment(Qt::AlignRight);
-    minStemBackgroundLevelLayout->addWidget(minStemBackgroundLevelLabel);
-    minStemBackgroundLevelLayout->addWidget(minStemBackgroundLevelSpinBox = new QSpinBox);
+    // Right Column
+    row = 0;
+
+    // Min Stem Background Level
+    gridLayout->addWidget(new QLabel("Min Stem Background Level:"), row, 3, Qt::AlignRight);
+    minStemBackgroundLevelSpinBox = new QSpinBox;
+    minStemBackgroundLevelSpinBox->setMaximum(9999);
     minStemBackgroundLevelSpinBox->setFixedWidth(50);
-    rightColumn->addLayout(minStemBackgroundLevelLayout);
+    minStemBackgroundLevelSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(minStemBackgroundLevelSpinBox, row, 4);
+    row++;
 
-    QHBoxLayout *fast2playLayout = new QHBoxLayout;
-    QLabel *fast2playLabel = new QLabel("Fast 2 Play:");
-    fast2playLabel->setAlignment(Qt::AlignRight);
-    fast2playLayout->addWidget(fast2playLabel);
-    fast2playLayout->addWidget(fast2playDoubleSpinBox = new QDoubleSpinBox);
+    // Fast 2 Play
+    gridLayout->addWidget(new QLabel("Fast 2 Play:"), row, 3, Qt::AlignRight);
+    fast2playDoubleSpinBox = new QDoubleSpinBox;
     fast2playDoubleSpinBox->setFixedWidth(50);
-    rightColumn->addLayout(fast2playLayout);
+    fast2playDoubleSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(fast2playDoubleSpinBox, row, 4);
+    row++;
 
-    QHBoxLayout *fast1playLayout = new QHBoxLayout;
-    QLabel *fast1playLabel = new QLabel("Fast 1 Play:");
-    fast1playLabel->setAlignment(Qt::AlignRight);
-    fast1playLayout->addWidget(fast1playLabel);
-    fast1playLayout->addWidget(fast1playDoubleSpinBox = new QDoubleSpinBox);
+    // Fast 1 Play
+    gridLayout->addWidget(new QLabel("Fast 1 Play:"), row, 3, Qt::AlignRight);
+    fast1playDoubleSpinBox = new QDoubleSpinBox;
     fast1playDoubleSpinBox->setFixedWidth(50);
-    rightColumn->addLayout(fast1playLayout);
+    fast1playDoubleSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(fast1playDoubleSpinBox, row, 4);
+    row++;
 
-    QHBoxLayout *slow1playLayout = new QHBoxLayout;
-    QLabel *slow1playLabel = new QLabel("Slow 1 Play:");
-    slow1playLabel->setAlignment(Qt::AlignRight);
-    slow1playLayout->addWidget(slow1playLabel);
-    slow1playLayout->addWidget(slow1playDoubleSpinBox = new QDoubleSpinBox);
+    // Slow 1 Play
+    gridLayout->addWidget(new QLabel("Slow 1 Play:"), row, 3, Qt::AlignRight);
+    slow1playDoubleSpinBox = new QDoubleSpinBox;
     slow1playDoubleSpinBox->setFixedWidth(50);
-    rightColumn->addLayout(slow1playLayout);
+    slow1playDoubleSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(slow1playDoubleSpinBox, row, 4);
+    row++;
 
-    QHBoxLayout *recordPeriodLayout = new QHBoxLayout;
-    QLabel *recordPeriodLabel = new QLabel("Record Period:");
-    recordPeriodLabel->setAlignment(Qt::AlignRight);
-    recordPeriodLayout->addWidget(recordPeriodLabel);
-    recordPeriodLayout->addWidget(recordPeriodSpinBox = new QSpinBox);
+    // Record Period
+    gridLayout->addWidget(new QLabel("Record Period:"), row, 3, Qt::AlignRight);
+    recordPeriodSpinBox = new QSpinBox;
     recordPeriodSpinBox->setFixedWidth(50);
-    rightColumn->addLayout(recordPeriodLayout);
+    recordPeriodSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(recordPeriodSpinBox, row, 4);
 
-    columnLayout->addLayout(leftColumn);
-    columnLayout->addLayout(rightColumn);
-
-    mainLayout->addLayout(columnLayout);
+    mainLayout->addLayout(gridLayout);
 
     applyButton = new QPushButton("Apply");
     okButton = new QPushButton("OK");
