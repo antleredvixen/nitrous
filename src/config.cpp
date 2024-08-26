@@ -15,6 +15,15 @@ Config::Config(QWidget *parent) : QWidget(parent)
     QLabel *configLabel = new QLabel("<b>Configuration</b>");
     mainLayout->addWidget(configLabel, 0, Qt::AlignLeft);
 
+    // Name
+    QHBoxLayout *nameLayout = new QHBoxLayout;
+    nameLayout->addWidget(new QLabel("Name:"));
+    nameLineEdit = new QLineEdit;
+    nameLineEdit->setFixedWidth(150);
+    nameLayout->addWidget(nameLineEdit);
+    nameLayout->addStretch();
+    mainLayout->addLayout(nameLayout);
+
     QGridLayout *gridLayout = new QGridLayout;
     gridLayout->setColumnStretch(0, 1);  // Left column
     gridLayout->setColumnStretch(1, 0);  // Left column input
@@ -25,13 +34,6 @@ Config::Config(QWidget *parent) : QWidget(parent)
 
     // Left Column
     int row = 0;
-
-    // Name
-    gridLayout->addWidget(new QLabel("Name:"), row, 0, Qt::AlignRight);
-    nameLineEdit = new QLineEdit;
-    nameLineEdit->setFixedWidth(150);
-    gridLayout->addWidget(nameLineEdit, row, 1);
-    row++;
 
     // Seek Jump Period
     gridLayout->addWidget(new QLabel("Seek Jump Period:"), row, 0, Qt::AlignRight);
