@@ -13,7 +13,10 @@ void ConfigUpdate::updateUIFromConfig(ConfigData& configData, QLineEdit* nameLin
                                       QDoubleSpinBox* fast2playDoubleSpinBox,
                                       QDoubleSpinBox* fast1playDoubleSpinBox,
                                       QDoubleSpinBox* slow1playDoubleSpinBox,
-                                      QSpinBox* recordPeriodSpinBox)
+                                      QSpinBox* recordPeriodSpinBox,
+                                      QSpinBox* headphoneWiredLimitSpinBox,
+                                      QSpinBox* headphoneBTLimitSpinBox,
+                                      QSpinBox* splitterPreferenceSpinBox)
 {
     nameLineEdit->setText(configData.name);
     seekJumpPeriodSpinBox->setValue(configData.seekJumpPeriod);
@@ -25,6 +28,9 @@ void ConfigUpdate::updateUIFromConfig(ConfigData& configData, QLineEdit* nameLin
     fast1playDoubleSpinBox->setValue(configData.fast1play);
     slow1playDoubleSpinBox->setValue(configData.slow1play);
     recordPeriodSpinBox->setValue(configData.recordPeriod);
+    headphoneWiredLimitSpinBox->setValue(configData.headphoneWiredLimit);
+    headphoneBTLimitSpinBox->setValue(configData.headphoneBTLimit);
+    splitterPreferenceSpinBox->setValue(configData.splitterPreference);
 }
 
 void ConfigUpdate::updateConfigFromUI(ConfigData& configData, QLineEdit* nameLineEdit,
@@ -36,7 +42,10 @@ void ConfigUpdate::updateConfigFromUI(ConfigData& configData, QLineEdit* nameLin
                                       QDoubleSpinBox* fast2playDoubleSpinBox,
                                       QDoubleSpinBox* fast1playDoubleSpinBox,
                                       QDoubleSpinBox* slow1playDoubleSpinBox,
-                                      QSpinBox* recordPeriodSpinBox)
+                                      QSpinBox* recordPeriodSpinBox,
+                                      QSpinBox* headphoneWiredLimitSpinBox,
+                                      QSpinBox* headphoneBTLimitSpinBox,
+                                      QSpinBox* splitterPreferenceSpinBox)
 {
     configData.name = nameLineEdit->text();
     configData.seekJumpPeriod = seekJumpPeriodSpinBox->value();
@@ -48,4 +57,7 @@ void ConfigUpdate::updateConfigFromUI(ConfigData& configData, QLineEdit* nameLin
     configData.fast1play = fast1playDoubleSpinBox->value();
     configData.slow1play = slow1playDoubleSpinBox->value();
     configData.recordPeriod = recordPeriodSpinBox->value();
+    configData.headphoneWiredLimit = headphoneWiredLimitSpinBox->value();
+    configData.headphoneBTLimit = headphoneBTLimitSpinBox->value();
+    configData.splitterPreference = splitterPreferenceSpinBox->value();
 }

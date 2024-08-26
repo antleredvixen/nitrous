@@ -39,6 +39,12 @@ public:
     void setSlow1playDoubleSpinBox(QDoubleSpinBox *spinBox);
     QSpinBox *getRecordPeriodSpinBox();
     void setRecordPeriodSpinBox(QSpinBox *spinBox);
+    QSpinBox *getHeadphoneWiredLimitSpinBox();
+    void setHeadphoneWiredLimitSpinBox(QSpinBox *spinBox);
+    QSpinBox *getHeadphoneBTLimitSpinBox();
+    void setHeadphoneBTLimitSpinBox(QSpinBox *spinBox);
+    QSpinBox *getSplitterPreferenceSpinBox();
+    void setSplitterPreferenceSpinBox(QSpinBox *spinBox);
 
     void updateCurrentDirectory(const QString &path);
 
@@ -61,6 +67,9 @@ private:
     QDoubleSpinBox *fast1playDoubleSpinBox;
     QDoubleSpinBox *slow1playDoubleSpinBox;
     QSpinBox *recordPeriodSpinBox;
+    QSpinBox *headphoneWiredLimitSpinBox;
+    QSpinBox *headphoneBTLimitSpinBox;
+    QSpinBox *splitterPreferenceSpinBox;
     QPushButton *applyButton;
     QPushButton *okButton;
 

@@ -25,6 +25,9 @@ bool ConfigLoad::loadConfig(ConfigData& config, const QString& directory) {
         config.fast1play = parameters["Fast1play"].toDouble();
         config.slow1play = parameters["Slow1play"].toDouble();
         config.recordPeriod = parameters["RecordPeriod_secs"].toInt();
+        config.headphoneWiredLimit = parameters["HeadphoneWiredLimit"].toInt();
+        config.headphoneBTLimit = parameters["HeadphoneBTLimit"].toInt();
+        config.splitterPreference = parameters["SplitterPreference"].toInt();
 
         configFile.close();
         return true;

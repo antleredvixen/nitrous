@@ -9,7 +9,6 @@
 bool ConfigSave::saveConfig(const ConfigData& config) {
     // Get the current directory
     QString currentDir = QDir::currentPath();
-
     // Construct the path to CONFIG.TXT in the current directory
     QString configFilePath = currentDir + "/CONFIG.TXT";
 
@@ -26,11 +25,13 @@ bool ConfigSave::saveConfig(const ConfigData& config) {
     parameters["Fast1play"] = config.fast1play;
     parameters["Slow1play"] = config.slow1play;
     parameters["RecordPeriod_secs"] = config.recordPeriod;
+    parameters["HeadphoneWiredLimit"] = config.headphoneWiredLimit;
+    parameters["HeadphoneBTLimit"] = config.headphoneBTLimit;
+    parameters["SplitterPreference"] = config.splitterPreference;
 
     jsonObject["parameters"] = parameters;
 
     QJsonDocument jsonDoc(jsonObject);
-
     QFile configFile(configFilePath);
     if (configFile.open(QFile::WriteOnly)) {
         configFile.write(jsonDoc.toJson(QJsonDocument::Indented));

@@ -16,6 +16,9 @@ public:
     double fast1play;
     double slow1play;
     int recordPeriod;
+    int headphoneWiredLimit;
+    int headphoneBTLimit;
+    int splitterPreference;
 };
 
 #endif // CONFIG_DATA_H

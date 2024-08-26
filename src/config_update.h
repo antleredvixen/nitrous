@@ -18,7 +18,10 @@ public:
                             QDoubleSpinBox* fast2playDoubleSpinBox,
                             QDoubleSpinBox* fast1playDoubleSpinBox,
                             QDoubleSpinBox* slow1playDoubleSpinBox,
-                            QSpinBox* recordPeriodSpinBox);
+                            QSpinBox* recordPeriodSpinBox,
+                            QSpinBox* headphoneWiredLimitSpinBox,
+                            QSpinBox* headphoneBTLimitSpinBox,
+                            QSpinBox* splitterPreferenceSpinBox);
 
     void updateConfigFromUI(ConfigData& configData, QLineEdit* nameLineEdit,
                             QSpinBox* seekJumpPeriodSpinBox,
@@ -29,7 +32,10 @@ public:
                             QDoubleSpinBox* fast2playDoubleSpinBox,
                             QDoubleSpinBox* fast1playDoubleSpinBox,
                             QDoubleSpinBox* slow1playDoubleSpinBox,
-                            QSpinBox* recordPeriodSpinBox);
+                            QSpinBox* recordPeriodSpinBox,
+                            QSpinBox* headphoneWiredLimitSpinBox,
+                            QSpinBox* headphoneBTLimitSpinBox,
+                            QSpinBox* splitterPreferenceSpinBox);
 };
 
 #endif // CONFIG_UPDATE_H

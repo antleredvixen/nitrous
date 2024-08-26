@@ -35,6 +35,46 @@ Config::Config(QWidget *parent) : QWidget(parent)
     // Left Column
     int row = 0;
 
+    // Record Period
+    gridLayout->addWidget(new QLabel("Recording Length:"), row, 0, Qt::AlignRight);
+    recordPeriodSpinBox = new QSpinBox;
+    recordPeriodSpinBox->setFixedWidth(50);
+    recordPeriodSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(recordPeriodSpinBox, row, 1);
+    row++;
+
+    // Slow 1 Play
+    gridLayout->addWidget(new QLabel("Slow Speed:"), row, 0, Qt::AlignRight);
+    slow1playDoubleSpinBox = new QDoubleSpinBox;
+    slow1playDoubleSpinBox->setFixedWidth(50);
+    slow1playDoubleSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(slow1playDoubleSpinBox, row, 1);
+    row++;
+
+    // Fast 1 Play
+    gridLayout->addWidget(new QLabel("Fast Speed:"), row, 0, Qt::AlignRight);
+    fast1playDoubleSpinBox = new QDoubleSpinBox;
+    fast1playDoubleSpinBox->setFixedWidth(50);
+    fast1playDoubleSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(fast1playDoubleSpinBox, row, 1);
+    row++;
+
+    // Fast 2 Play
+    gridLayout->addWidget(new QLabel("Fastest Speed:"), row, 0, Qt::AlignRight);
+    fast2playDoubleSpinBox = new QDoubleSpinBox;
+    fast2playDoubleSpinBox->setFixedWidth(50);
+    fast2playDoubleSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(fast2playDoubleSpinBox, row, 1);
+    row++;
+
+    // Isolation Hit Box Size
+    gridLayout->addWidget(new QLabel("Isolation Hit Box Size:"), row, 0, Qt::AlignRight);
+    isolationHitBoxSizeSpinBox = new QSpinBox;
+    isolationHitBoxSizeSpinBox->setFixedWidth(50);
+    isolationHitBoxSizeSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(isolationHitBoxSizeSpinBox, row, 1);
+    row++;
+
     // Seek Jump Period
     gridLayout->addWidget(new QLabel("Seek Jump Period:"), row, 0, Qt::AlignRight);
     QHBoxLayout *seekJumpLayout = new QHBoxLayout;
@@ -48,33 +88,6 @@ Config::Config(QWidget *parent) : QWidget(parent)
     gridLayout->addLayout(seekJumpLayout, row, 1);
     row++;
 
-    // Seek Buffers To Play
-    gridLayout->addWidget(new QLabel("Seek Buffers To Play:"), row, 0, Qt::AlignRight);
-    seekBuffersToPlaySpinBox = new QSpinBox;
-    seekBuffersToPlaySpinBox->setFixedWidth(50);
-    seekBuffersToPlaySpinBox->setAlignment(Qt::AlignRight);
-    gridLayout->addWidget(seekBuffersToPlaySpinBox, row, 1);
-    row++;
-
-    // Isolation Ramp Period
-    gridLayout->addWidget(new QLabel("Isolation Ramp Period:"), row, 0, Qt::AlignRight);
-    QHBoxLayout *isolationRampLayout = new QHBoxLayout;
-    isolationRampPeriodSpinBox = new QSpinBox;
-    isolationRampPeriodSpinBox->setFixedWidth(50);
-    isolationRampPeriodSpinBox->setAlignment(Qt::AlignRight);
-    isolationRampLayout->addWidget(isolationRampPeriodSpinBox);
-    isolationRampLayout->addWidget(new QLabel("ms"));
-    isolationRampLayout->addStretch();
-    gridLayout->addLayout(isolationRampLayout, row, 1);
-    row++;
-
-    // Isolation Hit Box Size
-    gridLayout->addWidget(new QLabel("Isolation Hit Box Size:"), row, 0, Qt::AlignRight);
-    isolationHitBoxSizeSpinBox = new QSpinBox;
-    isolationHitBoxSizeSpinBox->setFixedWidth(50);
-    isolationHitBoxSizeSpinBox->setAlignment(Qt::AlignRight);
-    gridLayout->addWidget(isolationHitBoxSizeSpinBox, row, 1);
-
     // Right Column
     row = 0;
 
@@ -87,36 +100,49 @@ Config::Config(QWidget *parent) : QWidget(parent)
     gridLayout->addWidget(minStemBackgroundLevelSpinBox, row, 4);
     row++;
 
-    // Fast 2 Play
-    gridLayout->addWidget(new QLabel("Fast 2 Play:"), row, 3, Qt::AlignRight);
-    fast2playDoubleSpinBox = new QDoubleSpinBox;
-    fast2playDoubleSpinBox->setFixedWidth(50);
-    fast2playDoubleSpinBox->setAlignment(Qt::AlignRight);
-    gridLayout->addWidget(fast2playDoubleSpinBox, row, 4);
+    // Headphone BT Limit
+    gridLayout->addWidget(new QLabel("Headphone BT Limit:"), row, 3, Qt::AlignRight);
+    headphoneBTLimitSpinBox = new QSpinBox;
+    headphoneBTLimitSpinBox->setFixedWidth(50);
+    headphoneBTLimitSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(headphoneBTLimitSpinBox, row, 4);
     row++;
 
-    // Fast 1 Play
-    gridLayout->addWidget(new QLabel("Fast 1 Play:"), row, 3, Qt::AlignRight);
-    fast1playDoubleSpinBox = new QDoubleSpinBox;
-    fast1playDoubleSpinBox->setFixedWidth(50);
-    fast1playDoubleSpinBox->setAlignment(Qt::AlignRight);
-    gridLayout->addWidget(fast1playDoubleSpinBox, row, 4);
+    // Headphone Wired Limit
+    gridLayout->addWidget(new QLabel("Headphone Wired Limit:"), row, 3, Qt::AlignRight);
+    headphoneWiredLimitSpinBox = new QSpinBox;
+    headphoneWiredLimitSpinBox->setFixedWidth(50);
+    headphoneWiredLimitSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(headphoneWiredLimitSpinBox, row, 4);
     row++;
 
-    // Slow 1 Play
-    gridLayout->addWidget(new QLabel("Slow 1 Play:"), row, 3, Qt::AlignRight);
-    slow1playDoubleSpinBox = new QDoubleSpinBox;
-    slow1playDoubleSpinBox->setFixedWidth(50);
-    slow1playDoubleSpinBox->setAlignment(Qt::AlignRight);
-    gridLayout->addWidget(slow1playDoubleSpinBox, row, 4);
+    // Splitter Preference
+    gridLayout->addWidget(new QLabel("Splitter Preference:"), row, 3, Qt::AlignRight);
+    splitterPreferenceSpinBox = new QSpinBox;
+    splitterPreferenceSpinBox->setFixedWidth(50);
+    splitterPreferenceSpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(splitterPreferenceSpinBox, row, 4);
     row++;
 
-    // Record Period
-    gridLayout->addWidget(new QLabel("Record Period:"), row, 3, Qt::AlignRight);
-    recordPeriodSpinBox = new QSpinBox;
-    recordPeriodSpinBox->setFixedWidth(50);
-    recordPeriodSpinBox->setAlignment(Qt::AlignRight);
-    gridLayout->addWidget(recordPeriodSpinBox, row, 4);
+    // Isolation Ramp Period
+    gridLayout->addWidget(new QLabel("Isolation Ramp Period:"), row, 3, Qt::AlignRight);
+    QHBoxLayout *isolationRampLayout = new QHBoxLayout;
+    isolationRampPeriodSpinBox = new QSpinBox;
+    isolationRampPeriodSpinBox->setFixedWidth(50);
+    isolationRampPeriodSpinBox->setAlignment(Qt::AlignRight);
+    isolationRampLayout->addWidget(isolationRampPeriodSpinBox);
+    isolationRampLayout->addWidget(new QLabel("ms"));
+    isolationRampLayout->addStretch();
+    gridLayout->addLayout(isolationRampLayout, row, 4);
+    row++;
+
+    // Seek Buffers To Play
+    gridLayout->addWidget(new QLabel("Seek Buffers To Play:"), row, 3, Qt::AlignRight);
+    seekBuffersToPlaySpinBox = new QSpinBox;
+    seekBuffersToPlaySpinBox->setFixedWidth(50);
+    seekBuffersToPlaySpinBox->setAlignment(Qt::AlignRight);
+    gridLayout->addWidget(seekBuffersToPlaySpinBox, row, 4);
+    row++;
 
     mainLayout->addLayout(gridLayout);
 
@@ -158,7 +184,9 @@ void Config::onApplyClicked()
                               seekBuffersToPlaySpinBox, isolationRampPeriodSpinBox,
                               isolationHitBoxSizeSpinBox, minStemBackgroundLevelSpinBox,
                               fast2playDoubleSpinBox, fast1playDoubleSpinBox,
-                              slow1playDoubleSpinBox, recordPeriodSpinBox);
+                              slow1playDoubleSpinBox, recordPeriodSpinBox,
+                              headphoneWiredLimitSpinBox, headphoneBTLimitSpinBox,
+                              splitterPreferenceSpinBox);
     ConfigSave::saveConfig(m_configData);
 }
 
@@ -178,7 +206,9 @@ void Config::loadConfig()
                                       seekBuffersToPlaySpinBox, isolationRampPeriodSpinBox,
                                       isolationHitBoxSizeSpinBox, minStemBackgroundLevelSpinBox,
                                       fast2playDoubleSpinBox, fast1playDoubleSpinBox,
-                                      slow1playDoubleSpinBox, recordPeriodSpinBox);
+                                      slow1playDoubleSpinBox, recordPeriodSpinBox,
+                                      headphoneWiredLimitSpinBox, headphoneBTLimitSpinBox,
+                                      splitterPreferenceSpinBox);
         }
     } else {
         clearConfigForm();
@@ -197,4 +227,7 @@ void Config::clearConfigForm()
     fast1playDoubleSpinBox->setValue(0.0);
     slow1playDoubleSpinBox->setValue(0.0);
     recordPeriodSpinBox->setValue(0);
+    headphoneWiredLimitSpinBox->setValue(0);
+    headphoneBTLimitSpinBox->setValue(0);
+    splitterPreferenceSpinBox->setValue(0);
 }
